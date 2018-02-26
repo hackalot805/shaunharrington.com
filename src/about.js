@@ -2,6 +2,7 @@ import "babel-polyfill";
 import React, { Component } from 'react';
 import dozukilogo from './assets/dozuki-logo.png';
 import ifixitlogo from './assets/ifixit-logo.png';
+import './about.css';
 
 class About extends Component {
    render() {
