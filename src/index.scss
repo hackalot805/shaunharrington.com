@@ -1,0 +1,19 @@
+@import 'globals';
+
+$md-primary-color: $md-light-green-500;
+$md-secondary-color: $md-lime-a-400;
+
+@include react-md-everything;
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.md-background--primary {
+ background: $md-primary-color;
+}
+.md-text--theme-primary {
+  color: $md-primary-color;
+}

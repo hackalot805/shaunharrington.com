@@ -1,0 +1,18 @@
+BEGIN:VCARD
+VERSION:2.1
+N:Harrington;Shaun
+FN:Shaun Harrington
+ORG:PlanetHarrington;Engineering
+TITLE:Software Engineer
+TEL;MOBILE;VOICE:(805) 441-7875
+TEL;HOME;VOICE:(805) 489-4379
+ADR;WORK:;SLO;592 Seabright Ave;Grover Beach;CA;93433;United States of America
+LABEL;WORK;ENCODING=QUOTED-PRINTABLE:SLO=0D=0A592 Seabright Ave=0D=0AGrover Beach, CA 93433=0D=0AUnited States of Am=
+erica
+ADR;HOME:;;592 Seabright Ave;Grover Beach;CA;93433;United States of America
+LABEL;HOME;ENCODING=QUOTED-PRINTABLE:592 Seabright Ave=0D=0AGrover Beach, CA 93433=0D=0AUnited States of America
+URL;WORK:http://www.planetharrington.com
+EMAIL;PREF;INTERNET:shaun@planetharrington.com
+EMAIL;INTERNET:shaun@planetharrington.com
+REV:20110927T202543Z
+END:VCARD
