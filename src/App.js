@@ -10,6 +10,7 @@ import Tuner from './tuner';
 import About from './about';
 import Code from './code';
 import Resume from './resume';
+import Photos from './photos';
 
 class App extends Component {
    constructor() {
@@ -64,6 +65,10 @@ class App extends Component {
       } else if (key === 'code') {
          content = (
             <Code />
+         );
+      } else if (key === 'photos') {
+         content = (
+          <Photos />
          );
       } else {
          content = (

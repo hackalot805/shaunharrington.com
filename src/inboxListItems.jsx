@@ -30,6 +30,6 @@ export default [
    {
       key: 'photos',
       primaryText: 'Photos',
-      leftIcon: <i className="fa fa-photo"></i>,
+      leftIcon: <i className="fa fa-image"></i>,
    }
 ];
