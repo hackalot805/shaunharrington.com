@@ -26,5 +26,10 @@ export default [
       key: 'code',
       primaryText: 'Code',
       leftIcon: <i className="fa fa-code"></i>,
+   },
+   {
+      key: 'photos',
+      primaryText: 'Photos',
+      leftIcon: <i className="fa fa-photo"></i>,
    }
 ];
