@@ -7,6 +7,7 @@ import sc4_photo from './assets/sc4.jpg';
 import sb_photo from './assets/sb.jpg';
 import sb2_photo from './assets/sb2.jpg';
 import sb3_photo from './assets/sb3.jpg';
+import sb4_photo from './assets/sb4.jpg';
 import buddy_photo from './assets/buddy.jpg';
 import './about.css';
 import { Carousel } from 'react-bootstrap';
@@ -79,6 +80,13 @@ class Photos extends Component {
                          <Carousel.Caption>
                             <h3>SUPERBEAST</h3>
                             <p>Why do people keep looking at me?</p>
+                         </Carousel.Caption>
+                      </Carousel.Item>
+                      <Carousel.Item>
+                         <img alt="900x500" src={sb4_photo} />
+                         <Carousel.Caption>
+                            <h3>SUPERBEAST</h3>
+                            <p>I'm a tractor.</p>
                          </Carousel.Caption>
                       </Carousel.Item>
                       <Carousel.Item>
