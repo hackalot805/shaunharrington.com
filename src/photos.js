@@ -30,7 +30,7 @@ class Photos extends Component {
        <div>
           <div className="container-fluid text-left">
              <div className="row">
-                <div className='col-xs-12'>
+                <div className='col-xs-12 photos-wrapper'>
                    <Carousel>
                       <Carousel.Item>
                          <img alt="900x500" src={sc_photo} />
