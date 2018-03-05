@@ -86,7 +86,7 @@ class Code extends Component {
                             </div>
                          </section>
                          <div className="panel panel-default dogs-panel">
-                            <div className="panel-heading text-left"><span><i id='icon1' className="fa fa-calendar-alt" /></span> Snippets</div>
+                            <div className="panel-heading text-left"><span><i id='icon1' className="fa fa-cut" /></span> Snippets</div>
                             <div className="panel-body">
                                <ExpansionList className='md-cell md-cell--12'>
                                   <ExpansionPanel label="Get Easter JavaScript Function" footer={<CustomFooter codePenUrl='//codepen.io/hackalot805/pen/XZwXeN' />}>
@@ -116,9 +116,6 @@ getEaster(currentYear) {
                               `}
                             </code>
                          </pre>
-                                     <ExpansionPanel label="Actual Results" footer={null}>
-                                        {easterString}<br /><br />
-                                     </ExpansionPanel>
                                   </ExpansionPanel>
                                </ExpansionList>
                             </div>
@@ -132,5 +129,11 @@ getEaster(currentYear) {
       );
    }
 }
+
+/*
+                                     <ExpansionPanel label="Actual Results" footer={null}>
+                                        {easterString}<br /><br />
+                                     </ExpansionPanel>
+ */
 
 export default Code;
