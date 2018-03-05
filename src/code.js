@@ -85,7 +85,7 @@ class Code extends Component {
                                {buttonItems}
                             </div>
                          </section>
-                         <div className="panel panel-default dogs-panel">
+                         <div className="panel panel-default">
                             <div className="panel-heading text-left"><span><i id='icon1' className="fa fa-cut" /></span> Snippets</div>
                             <div className="panel-body">
                                <ExpansionList className='md-cell md-cell--12'>
