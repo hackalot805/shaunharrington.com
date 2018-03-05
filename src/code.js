@@ -1,5 +1,6 @@
 import "babel-polyfill";
 import React, { Component } from 'react';
+import { ExpansionList, ExpansionPanel } from 'react-md';
 import './code.css';
 
 class Code extends Component {
@@ -65,6 +66,12 @@ class Code extends Component {
          );
       });
 
+      const CustomFooter = (props) => (
+       <footer style={{ padding: 24 }}>
+          <a href={props.codePenUrl} target="_blank" rel="noopener noreferrer">CodePen</a>
+       </footer>
+      );
+
       return (
        <div>
           <div className="container-fluid">
@@ -79,9 +86,11 @@ class Code extends Component {
                             </div>
                          </section>
                          <div className="panel panel-default dogs-panel">
-                            <div className="panel-heading text-left"><span><i id='icon1' className="fa fa-calendar-alt" /></span> Compute Easter</div>
+                            <div className="panel-heading text-left"><span><i id='icon1' className="fa fa-calendar-alt" /></span> Snippets</div>
                             <div className="panel-body">
-                               <pre>
+                               <ExpansionList className='md-cell md-cell--12'>
+                                  <ExpansionPanel label="Compute Easter JavaScript Function" footer={<CustomFooter codePenUrl='//codepen.io/hackalot805/pen/XZwXeN' />}>
+                                    <pre>
                             <code>
                               {`
 getEaster(currentYear) {
@@ -106,9 +115,11 @@ getEaster(currentYear) {
                               `}
                             </code>
                          </pre>
-                               <h3>Actual Results...</h3>
-                               {easterString}<br /><br />
-                               <a href="https://codepen.io/hackalot805/pen/XZwXeN" target="_blank" rel="noopener noreferrer">&lt;CodePen&gt;</a>
+                                     <ExpansionPanel label="Actual Results" footer={null}>
+                                        {easterString}<br /><br />
+                                     </ExpansionPanel>
+                                  </ExpansionPanel>
+                               </ExpansionList>
                             </div>
                          </div>
                       </div>
