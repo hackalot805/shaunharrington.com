@@ -89,7 +89,8 @@ class Code extends Component {
                             <div className="panel-heading text-left"><span><i id='icon1' className="fa fa-calendar-alt" /></span> Snippets</div>
                             <div className="panel-body">
                                <ExpansionList className='md-cell md-cell--12'>
-                                  <ExpansionPanel label="Compute Easter JavaScript Function" footer={<CustomFooter codePenUrl='//codepen.io/hackalot805/pen/XZwXeN' />}>
+                                  <ExpansionPanel label="Get Easter JavaScript Function" footer={<CustomFooter codePenUrl='//codepen.io/hackalot805/pen/XZwXeN' />}>
+                                     <p>Based on my understanding of how to compute Easter.  I wrote this for a calendar generating program that I developed many years ago.</p>
                                     <pre>
                             <code>
                               {`
@@ -100,14 +101,14 @@ getEaster(currentYear) {
     let baseDay = ((base - 21) % 30) + 21;
     if (baseDay > 48)
     baseDay -= 1;
-    const nE = (currentYear + (currentYear / 4) + baseDay + 1 ) % 7;
-    const nQ = Math.ceil(baseDay + 7 - nE);
-    if (nQ <= 31) {
+    const baseWeek = (currentYear + (currentYear / 4) + baseDay + 1 ) % 7;
+    const offsetDay = Math.ceil(baseDay + 7 - baseWeek);
+    if (offsetDay <= 31) {
        easterMonth = 3;
-       easterDay = nQ;
+       easterDay = offsetDay;
     } else {
        easterMonth = 4;
-       easterDay = nQ - 31;
+       easterDay = offsetDay - 31;
     }
 
     return {month: easterMonth, day: easterDay};
