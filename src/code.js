@@ -1,8 +1,70 @@
 import "babel-polyfill";
 import React, { Component } from 'react';
+import './code.css';
 
 class Code extends Component {
+
+   // This is for calculating Easter up to the year 2099...
+   getEaster(nCurrentYear) {
+      let easterMonth = 0;
+      let easterDay = 0;
+      const base = 255 - (11 * (nCurrentYear % 19));
+      let baseDay = ((base - 21) % 30) + 21;
+      if (baseDay > 48)
+         baseDay -= 1;
+      const nE = (nCurrentYear + (nCurrentYear / 4) + baseDay + 1 ) % 7;
+      const nQ = Math.ceil(baseDay + 7 - nE);
+      if (nQ <= 31) {
+         easterMonth = 3;
+         easterDay = nQ;
+      } else {
+         easterMonth = 4;
+         easterDay = nQ - 31;
+      }
+
+      return {month: easterMonth, day: easterDay};
+   }
+
+   handleClick = (url) => {
+      window.open(url);
+   };
+
    render() {
+      const years = Array.from({length: 50}, (v, k) => k + 2018);
+      const easterString = years.map((year) => {
+         const easter = this.getEaster(year);
+         return (
+          <span key={year}>
+             {easter.month}-{easter.day}-{year},&nbsp;
+          </span>
+         );
+      });
+
+      const buttons = {
+         'github-progile': {'title': 'GitHub Profile', icon: 'fab fa-github', url: 'https://github.com/hackalot805'},
+         'github-cricket': {'title': 'Cricket Keeper', icon: 'fa fa-bullseye', url: 'https://github.com/hackalot805/cricketkeeper'},
+         'github-bbtuner': {'title': 'BB-Tuner', icon: 'fab fa-itunes-note', url: 'https://github.com/hackalot805/bbtuner'},
+         'github-bbtone': {'title': 'BB-Tone', icon: 'fa fa-volume-up', url: 'https://github.com/hackalot805/bbtone'},
+         'github-bbbeat': {'title': 'BB-Beat', icon: 'fa fa-headphones', url: 'https://github.com/hackalot805/bbbeat'}
+      };
+
+      const buttonItems =
+      Object.keys(buttons).map((key) => {
+         const button = buttons[key];
+         return (
+          <div key={button.title} className='list-item'>
+             <div className='btn btn-default btn-large list-item-content' onClick={() => this.handleClick(button.url)}>
+                <div className='list-item-title' title={button.title}>
+                   {button.title}
+                </div>
+                <div className="list-item-image">
+                   <i className={button.icon} />
+                </div>
+             </div>
+          </div>
+         );
+      });
+
       return (
        <div>
           <div className="container-fluid">
@@ -11,26 +73,44 @@ class Code extends Component {
                    <div className="panel panel-primary dogs-panel">
                       <div className="panel-heading text-left"><span><i id='icon1' className="fa fa-code" /></span> Code</div>
                       <div className="panel-body">
-                         <ul>
-                            <li>
-                               <a href="https://github.com/hackalot805" target="_blank" rel="noopener noreferrer">My GitHub Profile</a>
-                            </li>
-                            <li>
-                               <a href="https://github.com/hackalot805/cricketkeeper" target="_blank" rel="noopener noreferrer">'Cricket Keeper' Source</a>
-                            </li>
-                            <li>
-                               <a href="https://github.com/hackalot805/bbtuner" target="_blank" rel="noopener noreferrer">'BB-Tuner' Source</a>
-                            </li>
-                            <li>
-                               <a href="https://github.com/hackalot805/bbtone" target="_blank" rel="noopener noreferrer">'BB-Tone' Source</a>
-                            </li>
-                            <li>
-                               <a href="https://github.com/hackalot805/bbbeat" target="_blank" rel="noopener noreferrer">'BB-Beat' Source</a>
-                            </li>
-                            <li>
-                               Calendar code?
-                            </li>
-                         </ul>
+                         <section className='dashboard-section'>
+                            <div className="list-container">
+                               {buttonItems}
+                            </div>
+                         </section>
+                         <div className="panel panel-default dogs-panel">
+                            <div className="panel-heading text-left"><span><i id='icon1' className="fa fa-calendar-alt" /></span> Compute Easter</div>
+                            <div className="panel-body">
+                               <pre>
+                            <code>
+                              {`
+getEaster(currentYear) {
+    let easterMonth = 0;
+    let easterDay = 0;
+    const base = 255 - (11 * (currentYear % 19));
+    let baseDay = ((base - 21) % 30) + 21;
+    if (baseDay > 48)
+    baseDay -= 1;
+    const nE = (currentYear + (currentYear / 4) + baseDay + 1 ) % 7;
+    const nQ = Math.ceil(baseDay + 7 - nE);
+    if (nQ <= 31) {
+       easterMonth = 3;
+       easterDay = nQ;
+    } else {
+       easterMonth = 4;
+       easterDay = nQ - 31;
+    }
+
+    return {month: easterMonth, day: easterDay};
+}
+                              `}
+                            </code>
+                         </pre>
+                               <h3>Actual Results...</h3>
+                               {easterString}<br /><br />
+                               <a href="https://codepen.io/hackalot805/pen/XZwXeN" target="_blank" rel="noopener noreferrer">&lt;CodePen&gt;</a>
+                            </div>
+                         </div>
                       </div>
                    </div>
                 </div>
