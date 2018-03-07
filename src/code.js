@@ -81,13 +81,15 @@ class Code extends Component {
                       <div className="panel-heading text-left"><span><i id='icon1' className="fa fa-code" /></span> Code</div>
                       <div className="panel-body">
                          <p>
-                            Most of the interesting code that I have produced is proprietary, and I can't share it.
-                            This is what's left...
+                            Most of the interesting code that I have produced is proprietary, and I can't share it. This is what's left...
                          </p>
                          <section className='dashboard-section'>
                             <div className="list-container">
                                {buttonItems}
                             </div>
+                            <p class="text-center text-muted small">
+                               (<em>Click on a button to visit the GitHub repository.</em>)
+                            </p>
                          </section>
                          <div className="panel panel-default">
                             <div className="panel-heading text-left"><span><i id='icon1' className="fa fa-cut" /></span> Snippets</div>
