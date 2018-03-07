@@ -4,7 +4,8 @@
 .dashboard-section {
   background: inherit;
   padding: 0 10px 17px;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  border: none; }
   .dashboard-section .list-container {
     display: flex;
     flex-wrap: wrap;
