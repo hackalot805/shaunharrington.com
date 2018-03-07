@@ -95,8 +95,8 @@ class Code extends Component {
                                <ExpansionList className='md-cell md-cell--12'>
                                   <ExpansionPanel label="getEaster() JavaScript Function" footer={<CustomFooter codePenUrl='//codepen.io/hackalot805/pen/XZwXeN' />}>
                                      <p>Based on my understanding of how to compute Easter.  I wrote this for a calendar generating program that I developed many years ago.</p>
-                                    <pre>
-                            <code>
+                                     <pre>
+                                        <code>
                               {`
 getEaster(currentYear) {
     let easterMonth = 0;
@@ -118,8 +118,26 @@ getEaster(currentYear) {
     return {month: easterMonth, day: easterDay};
 }
                               `}
-                            </code>
-                         </pre>
+                                        </code>
+                                     </pre>
+                                  </ExpansionPanel>
+                               </ExpansionList>
+                               <ExpansionList className='md-cell md-cell--12'>
+                                  <ExpansionPanel label="CodeProject Articles" footer={null}>
+                                     <p>
+                                        <img src='https://icon-icons.com/icons2/801/PNG/512/CODEPROJECT_icon-icons.com_65877.png' style={{width: 20, top: -2, position: 'relative'}} />
+                                        Mostly old C++ code for obsolete Win32 platforms.
+                                     </p>
+
+                                     <ul>
+                                        <li><a href="https://www.codeproject.com/Articles/14634/A-Cool-Way-to-Navigate-Your-Start-Menu-that-Integr" target='_blank' rel="noopener noreferrer">Taskbar Extension</a></li>
+                                        <li><a href="https://www.codeproject.com/Articles/5113/A-Context-Menu-Handler-for-Windows-Users-That-Can" target='_blank' rel="noopener noreferrer">Context Menu Handler</a></li>
+                                        <li><a href="https://www.codeproject.com/Articles/8302/WinDiff-or-WinMerge-the-way-you-want-it" target='_blank' rel="noopener noreferrer">Another Context Menu Extension</a></li>
+                                        <li><a href="https://www.codeproject.com/Articles/15258/A-user-configurable-Idle-Computer-Notification-too" target='_blank' rel="noopener noreferrer">Idle Detection Win32 App</a></li>
+                                        <li><a href="https://www.codeproject.com/Articles/14411/A-Perpetual-Calendar-Generator-well-at-least-until" target='_blank' rel="noopener noreferrer">Win32 Desktop Calendar Generator</a></li>
+                                        <li><a href="https://www.codeproject.com/Articles/14952/A-simple-class-for-converting-numbers-into-a-strin" target='_blank' rel="noopener noreferrer">C++ Number Class</a></li>
+                                        <li><a href="https://www.codeproject.com/script/Membership/View.aspx?mid=451209" target='_blank' rel="noopener noreferrer">CodeProject Profile</a></li>
+                                     </ul>
                                   </ExpansionPanel>
                                </ExpansionList>
                             </div>

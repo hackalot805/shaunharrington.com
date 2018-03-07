@@ -5,8 +5,7 @@ import './App.css';
 import { NavigationDrawer } from 'react-md';
 //import { Button, SVGIcon, SelectionControl } from 'react-md';
 import inboxListItems from './inboxListItems';
-import Darts from './darts';
-import Tuner from './tuner';
+import Apps from './apps';
 import About from './about';
 import Code from './code';
 import Resume from './resume';
@@ -50,21 +49,17 @@ class App extends Component {
       const { /*visible, page, renderNode,*/ key } = this.state;
 
       let content = '';
-      if (key === 'darts') {
+      if (key === 'apps') {
          content = (
-            <Darts />
-         );
-      } else if (key === 'tuner') {
-         content = (
-            <Tuner />
+          <Apps />
          );
       } else if (key === 'about') {
          content = (
-            <About />
+          <About />
          );
       } else if (key === 'code') {
          content = (
-            <Code />
+          <Code />
          );
       } else if (key === 'photos') {
          content = (
@@ -72,7 +67,7 @@ class App extends Component {
          );
       } else {
          content = (
-            <Resume />
+          <Resume />
          );
 
       }

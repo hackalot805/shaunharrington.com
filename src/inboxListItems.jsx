@@ -13,14 +13,9 @@ export default [
       leftIcon: <i className="fa fa-file-alt"></i>,
    },
    {
-      key: 'tuner',
-      primaryText: 'Audio Tools',
-      leftIcon: <i className="fab fa-itunes-note"></i>,
-   },
-   {
-      key: 'darts',
-      primaryText: 'Cricket Keeper',
-      leftIcon: <i className="fa fa-bullseye"></i>,
+      key: 'apps',
+      primaryText: 'Apps',
+      leftIcon: <i className="fa fa-th"></i>,
    },
    {
       key: 'code',
