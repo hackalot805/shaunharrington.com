@@ -10,6 +10,7 @@ import About from './about';
 import Code from './code';
 import Resume from './resume';
 import Photos from './photos';
+import Playground from './playground';
 
 class App extends Component {
    constructor() {
@@ -65,11 +66,16 @@ class App extends Component {
          content = (
           <Photos />
          );
-      } else {
+      } else if (key === 'resume') {
          content = (
           <Resume />
          );
-
+      } else if (key === 'playground') {
+         content = (
+          <Playground />
+         );
+      } else {
+         // TODO: 404
       }
       const year = new Date().getFullYear();
 // <img src={logo} className='App-logo' alt='react-logo' /><img src={angularLogo} className='App-logo Angular-logo' alt='angular-logo' />&nbsp;&nbsp;&nbsp;<img src={nodejsLogo} className='App-logo Nodejs-logo' alt='nodejs-logo' />
