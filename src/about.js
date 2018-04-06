@@ -33,10 +33,10 @@ class About extends Component {
                          I really dig working with Amazon Web Services, NodeJS, ReactJS and Angular.
                          You can learn more about these very cool technologies by clicking on any of the spinning logos below.
                       </p>
-                      <p className="text-center">
+                      <p className="text-center logos">
                          <a href='https://aws.amazon.com' title='Amazon Web Services' target='_blank' rel="noopener noreferrer"><i className="App-logo fab fa-aws"></i></a><a href='https://nodejs.org' title='NodeJS' target='_blank' rel="noopener noreferrer"><i className="App-logo fab fa-node-js"></i></a><a href='https://reactjs.org' title='ReactJS' target='_blank' rel="noopener noreferrer"><i className="App-logo fab fa-react"></i></a><a href='https://angular.io' title='Angular' target='_blank' rel="noopener noreferrer"><i className="App-logo fab fa-angular"></i></a>
                       </p>
-                      <p class="logos">
+                      <p>
                          I occasionally have some extra cycles.  Feel free to <a href="mailto:me@shaunharrington.com" title='Contact me'>reach out</a> if you need help with a software project, or just want to say 'Hi'.
                       </p>
                       <div className="panel panel-primary dogs-panel">
