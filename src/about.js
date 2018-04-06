@@ -16,9 +16,9 @@ class About extends Component {
                       <p>
                          My name is Shaun Harrington and I develop software.
                          I'm currently working at <a href="https://www.dozuki.com" target="_blank" rel="noopener noreferrer">Dozuki</a>, an <a href="https://www.ifixit.com" target='_blank' rel="noopener noreferrer">iFixit</a> spin-off in beautiful <a href="http://slocity.org" title='San Luis Obispo' target='_blank' rel="noopener noreferrer">San Luis Obispo</a>.
-                         Dozuki helps you create, manage, and distribute work instructions and company documentation.
+                         Dozuki we build software that helps companies implement a continuous improvement culture to improve their people, their processes, and their communication.
                       </p>
-                      <div className="container-fluid">
+                      <div className="logos container-fluid">
                          <div className="row">
                             <div className='col-xs-12 col-sm-6 text-center quickFade delayOne'>
                                <a href="https://www.dozuki.com" target="_blank" rel="noopener noreferrer"><img className='full-width gutter-5' src={dozukilogo} title='Dozuki' alt='Dozuki' /></a>
