@@ -91,7 +91,7 @@ class App extends Component {
                         <p className="text-center text-muted gutter-5 remove-bottom">
                            <small>Site bootstrapped with <a target="_blank" rel="noopener noreferrer" href="https://github.com/facebookincubator/create-react-app">'Create React App'</a>.</small>
                         </p>
-                        <p className="text-center text-muted remove-top remove-bottom">
+                        <p className="text-center text-muted remove-top remove-bottom copyright">
                            &copy; {year} Shaun Harrington, All rights reserved.
                         </p>
                      </div>
