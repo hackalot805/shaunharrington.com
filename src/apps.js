@@ -99,7 +99,7 @@ class Apps extends Component {
                                   </p>
                                   <ul>
                                      <li>Enforces classic Cricket rules.</li>
-                                     <li>Designed with tablets in mind</li>
+                                     <li>Designed with tablets in mind.</li>
                                      <li>Auto scales to device or browser window size.</li>
                                      <li>Select the player titles to set the player names, if desired.</li>
                                      <li>Hit any button to score that value.</li>

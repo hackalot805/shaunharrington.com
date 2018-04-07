@@ -15,7 +15,7 @@ class About extends Component {
                    <section>
                       <p>
                          My name is Shaun Harrington and I develop software.
-                         I'm currently working at <a href="https://www.dozuki.com" target="_blank" rel="noopener noreferrer">Dozuki</a>, an <a href="https://www.ifixit.com" target='_blank' rel="noopener noreferrer">iFixit</a> spin-off in beautiful <a href="http://slocity.org" title='San Luis Obispo' target='_blank' rel="noopener noreferrer">San Luis Obispo</a>.
+                         I'm currently working at <a href="https://www.dozuki.com" target="_blank" rel="noopener noreferrer">Dozuki</a>, an <a href="https://www.ifixit.com" target='_blank' rel="noopener noreferrer">iFixit</a> spin-off located in beautiful <a href="http://slocity.org" title='San Luis Obispo' target='_blank' rel="noopener noreferrer">San Luis Obispo</a>.
                          At Dozuki we build software that helps companies implement a continuous improvement culture to improve their people, their processes, and their communication.
                       </p>
                       <div className="logos container-fluid">
@@ -29,7 +29,7 @@ class About extends Component {
                          </div>
                       </div>
                       <p>
-                         While I spend most of my time writing classes and functions in PHP and JavaScript,
+                         While I spend most of my time writing classes and functions using PHP and JavaScript,
                          I really dig working with Amazon Web Services, NodeJS, ReactJS and Angular.
                          You can learn more about these very cool technologies by clicking on any of the spinning logos below.
                       </p>
