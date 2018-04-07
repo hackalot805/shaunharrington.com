@@ -81,7 +81,7 @@ class App extends Component {
 // <img src={logo} className='App-logo' alt='react-logo' /><img src={angularLogo} className='App-logo Angular-logo' alt='angular-logo' />&nbsp;&nbsp;&nbsp;<img src={nodejsLogo} className='App-logo Nodejs-logo' alt='nodejs-logo' />
 // <a href='https://aws.amazon.com' title='Amazon Web Services' target='_blank' rel="noopener noreferrer"><i className="App-logo fab fa-aws"></i></a><a href='https://nodejs.org' title='NodeJS' target='_blank' rel="noopener noreferrer"><i className="App-logo fab fa-node-js"></i></a><a href='https://reactjs.org' title='ReactJS' target='_blank' rel="noopener noreferrer"><i className="App-logo fab fa-react"></i></a><a href='https://angular.io' title='Angular' target='_blank' rel="noopener noreferrer"><i className="App-logo fab fa-angular"></i></a>
      return (
-       <NavigationDrawer drawerTitle={<p>Shaun Harrington <img src={harringtonLogo} className='App-logo Harrington-logo' alt='angular-logo' /></p>} toolbarTitle={<div></div>} navItems={this.navItems}>
+       <NavigationDrawer drawerTitle={<p>Shaun Harrington <img src={harringtonLogo} className='App-logo Harrington-logo' alt='harrington-logo' /></p>} toolbarTitle={<div></div>} navItems={this.navItems}>
          <div className="App">
             {content}
             <footer className="page-content">
