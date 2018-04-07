@@ -13,7 +13,7 @@ class Apps extends Component {
                    <div id='tuner-panel' className="panel panel-primary dogs-panel">
                       <div className="panel-heading text-left"><span><i id='icon2' className="fab fa-itunes-note" /></span> Audio Tools</div>
                       <div className="panel-body">
-                         <p>
+                         <p class="small">
                             I wrote these JAVA based audio tools as a suite of promotional products for a company that wanted something to give away at trade shows.
                             Shout out to Andrew Shriepbier for the turn on to FFT. (<a href=' https://www.macworld.com/article/1025524/bbtuner.html' target='_blank' rel="noopener noreferrer">press</a>)
                          </p>
@@ -71,6 +71,11 @@ class Apps extends Component {
                                         </div>
                                      </CardText>
                                   </Card>
+                                  <p class="note-to-users">
+                                     <em><b>NOTE TO MAC USERS:</b></em> Because these are unsigned jar files,
+                                     you will need to download and then launch these apps from within Finder.
+                                     The Mac OS will block launching if you try to launch them from the browser.
+                                  </p>
                                </div>
                             </div>
                          </div>

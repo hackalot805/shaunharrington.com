@@ -124,8 +124,13 @@ getEaster(currentYear) {
                                      </pre>
                                   </ExpansionPanel>
                                </ExpansionList>
+                            </div>
+                         </div>
+                         <div className="panel panel-default">
+                            <div className="panel-heading text-left"><span><i id='icon2' className="fa fa-newspaper" /></span> Articles</div>
+                            <div className="panel-body">
                                <ExpansionList className='md-cell md-cell--12'>
-                                  <ExpansionPanel label="CodeProject Articles" footer={null}>
+                                  <ExpansionPanel label="CodeProject" footer={null}>
                                      <p>
                                         <img src='https://icon-icons.com/icons2/801/PNG/512/CODEPROJECT_icon-icons.com_65877.png' style={{width: 20, top: -2, position: 'relative'}} />
                                         Mostly old C++ code for obsolete Win32 platforms.
