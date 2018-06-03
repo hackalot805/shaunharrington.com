@@ -27,9 +27,9 @@ export default [
       primaryText: 'Photos',
       leftIcon: <i className="fa fa-image"></i>,
    },
-   {
+/*   {
       key: 'playground',
       primaryText: 'Playground',
       leftIcon: <i className="fa fa-image"></i>,
-   }
+   }*/
 ];
