@@ -3,13 +3,13 @@ import React, { Component } from 'react';
 
 class FunPane extends Component {
    render() {
-      let { extra } = this.props;
+      let { extra, size } = this.props;
 
       let cssClass = `fun-pane ${extra}`;
 
       const divStyle = {
-         width: '80px',
-         height: '80px',
+         width: `80px`,
+         height: `80px`,
          border: "solid 2px white",
          borderRadius: "5px",
          opacity: ".5",

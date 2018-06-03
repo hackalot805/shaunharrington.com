@@ -1,15 +1,17 @@
 .fun-panes-container {
-   border: solid 3px black;
-   margin: 20px;
-   height: 806px;
+   height: 100%;
+   width: 100%;
    background-repeat: no-repeat;
    background-size: cover;
-   background-position: 50%;
+   background-position: 50% 50%;
    display: flex;
    justify-content: flex-start;
    align-content: flex-start;
    flex-wrap: wrap;
    overflow: hidden;
+   position: absolute;
+   top: 0;
+   bottom: 0;
 }
 
 .fun-pane {

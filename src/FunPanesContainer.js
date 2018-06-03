@@ -17,10 +17,11 @@ class FunPanesContainer extends Component {
    }
 
    getPanes() {
+      const { paneSize } = this.props;
+
       let panes = [];
-      for (let n = 0; n < 230; n++) {
+      for (let n = 0; n < 400; n++) {
          const randVal = Math.random();
-         console.log(parseInt(n*randVal)%3);
          let cssClass = '';
          if (parseInt(n*randVal)%2) {
             cssClass = "fun-pane2";
@@ -32,7 +33,7 @@ class FunPanesContainer extends Component {
             cssClass += " fun-pane4";
          }
          panes.push (
-          <FunPane key={n} extra={cssClass} />
+          <FunPane key={n} extra={cssClass} size={paneSize} />
          );
       }
       this.setState({

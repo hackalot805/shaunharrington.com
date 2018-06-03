@@ -8,7 +8,7 @@ class Playground extends Component {
    render() {
       return (
 
-       <FunPanesContainer image={sc_photo} speed='5' />
+       <FunPanesContainer image={sc_photo} size={80} speed={5} />
 
       );
    }
