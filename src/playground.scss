@@ -1,0 +1,100 @@
+.fun-panes-container {
+   border: solid 3px black;
+   margin: 20px;
+   height: 812px;
+   background-repeat: no-repeat;
+   background-size: cover;
+   display: flex;
+   justify-content: flex-start;
+   align-content: flex-start;
+   flex-wrap: wrap;
+   overflow: hidden;
+}
+
+.fun-pane {
+   background-color: red;
+}
+
+.fun-pane {
+   -webkit-animation-name: spin;
+   -webkit-animation-duration: 3s;
+   -webkit-animation-iteration-count: infinite;
+   -webkit-animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+   -moz-animation-name: spin;
+   -moz-animation-duration: 3s;
+   -moz-animation-iteration-count: infinite;
+   -moz-animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+   -ms-animation-name: spin;
+   -ms-animation-duration: 3s;
+   -ms-animation-iteration-count: infinite;
+   -ms-animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+
+   animation-name: spin;
+   animation-duration: 3s;
+   animation-iteration-count: infinite;
+   animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+}
+
+.fun-pane2 {
+   -webkit-animation-name: spin;
+   -webkit-animation-duration: 5s;
+   -webkit-animation-iteration-count: infinite;
+   -webkit-animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+   -moz-animation-name: spin;
+   -moz-animation-duration: 5s;
+   -moz-animation-iteration-count: infinite;
+   -moz-animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+   -ms-animation-name: spin;
+   -ms-animation-duration: 5s;
+   -ms-animation-iteration-count: infinite;
+   -ms-animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+
+   animation-name: spin;
+   animation-duration: 5s;
+   animation-iteration-count: infinite;
+   animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+}
+
+.fun-pane3 {
+   -webkit-animation-name: spin;
+   -webkit-animation-duration: 7s;
+   -webkit-animation-iteration-count: infinite;
+   -webkit-animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+   -moz-animation-name: spin;
+   -moz-animation-duration: 7s;
+   -moz-animation-iteration-count: infinite;
+   -moz-animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+   -ms-animation-name: spin;
+   -ms-animation-duration: 7s;
+   -ms-animation-iteration-count: infinite;
+   -ms-animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+
+   animation-name: spin;
+   animation-duration: 7s;
+   animation-iteration-count: infinite;
+   animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+}
+
+.fun-pane4 {
+   background-color: green;
+}
+
+@-ms-keyframes spin {
+   from { opacity: 0.0; }
+   to { opacity: 1.0; }
+}
+
+@-moz-keyframes spin {
+   from { opacity: 0.0; }
+   to { opacity: 1.0; }
+}
+
+@-webkit-keyframes spin {
+   from { opacity: 0.0; }
+   to { opacity: 1.0; }
+}
+
+@keyframes spin {
+   from { opacity: 0.0; }
+   to { opacity: 1.0; }
+}
