@@ -3,11 +3,6 @@ import React, { Component } from 'react';
 import FunPane from './FunPane';
 import PropTypes from 'prop-types';
 
-/*
-Todo: max and mins for the args.
-Todo: prop types and defaults for the args
- */
-
 class FunPanesContainer extends Component {
    constructor(props) {
       super(props);
@@ -24,6 +19,16 @@ class FunPanesContainer extends Component {
 
    getPanes() {
       const { paneCount, refreshSpeed, speed, primary, secondary, ...props } = this.props;
+
+      // Todo: max and min for the args.
+      // paneCount, 1 - 1000;
+      // refreshSpeed, 1 - 100;
+      // speed, 0.1 - 10.0;
+      // size, 10 - 500;
+      // borderRadius, 0 - 50;
+      // borderWidth, 0 - 50;
+
+      // TODO make color a #xxxxxx
 
       let panes = [];
       for (let nDex = 0; nDex < paneCount; nDex++) {
