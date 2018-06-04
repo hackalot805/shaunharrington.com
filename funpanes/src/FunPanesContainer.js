@@ -31,6 +31,7 @@ class FunPanesContainer extends Component {
          let colorOut = primary;
          const randVal = Math.random();
          let cssClass = '';
+
          if (parseInt(nDex*randVal, 10)%2) {
             cssClass = "fun-pane2";
          }
@@ -69,28 +70,28 @@ class FunPanesContainer extends Component {
 }
 
 FunPanesContainer.propTypes = {
-   image: PropTypes.string.isRequired,
-   size: PropTypes.number,
-   paneCount: PropTypes.number,
-   refreshSpeed: PropTypes.number,
-   speed: PropTypes.number,
-   primary: PropTypes.string,
-   secondary: PropTypes.string,
-   borderWidth: PropTypes.number,
-   borderRadius: PropTypes.number,
    borderColor: PropTypes.string,
+   borderRadius: PropTypes.number,
+   borderWidth: PropTypes.number,
+   image: PropTypes.string.isRequired,
+   paneCount: PropTypes.number,
+   primary: PropTypes.string,
+   refreshSpeed: PropTypes.number,
+   secondary: PropTypes.string,
+   size: PropTypes.number,
+   speed: PropTypes.number,
 };
 
 FunPanesContainer.defaultProps = {
-   size: 140,
-   paneCount: 70,
-   refreshSpeed: 2,
-   speed: 1.4,
-   primary: "red",
-   secondary: "blue",
-   borderWidth: 2,
-   borderRadius: 1,
    borderColor: "gray",
+   borderRadius: 1,
+   borderWidth: 2,
+   paneCount: 70,
+   primary: "red",
+   refreshSpeed: 2,
+   secondary: "blue",
+   size: 140,
+   speed: 1.4,
 };
 
 export default FunPanesContainer;
