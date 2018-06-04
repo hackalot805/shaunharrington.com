@@ -1,0 +1,110 @@
+body {
+   margin: 0;
+   padding: 0;
+}
+
+.fun-panes-container {
+   height: 100%;
+   width: 100%;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: 50% 50%;
+   display: flex;
+   justify-content: flex-start;
+   align-content: flex-start;
+   flex-wrap: wrap;
+   overflow: hidden;
+   position: absolute;
+   top: 0;
+   bottom: 0;
+}
+
+.fun-pane {
+   background-color: #313cff;
+}
+
+.fun-pane {
+   -webkit-animation-name: spin;
+   -webkit-animation-iteration-count: infinite;
+   -webkit-animation-timing-function: cubic-bezier(0.1, 0.1, 1.0, 0.7);
+   -moz-animation-name: spin;
+   -moz-animation-iteration-count: infinite;
+   -moz-animation-timing-function: cubic-bezier(0.1, 0.1, 1.0, 0.7);
+   -ms-animation-name: spin;
+   -ms-animation-iteration-count: infinite;
+   -ms-animation-timing-function: cubic-bezier(0.1, 0.1, 1.0, 0.7);
+   animation-name: spin;
+   animation-iteration-count: infinite;
+   animation-timing-function: cubic-bezier(0.1, 0.1, 1.0, 0.7);
+}
+
+.fun-pane2 {
+   -webkit-animation-name: spinr;
+   -webkit-animation-iteration-count: infinite;
+   -webkit-animation-timing-function: cubic-bezier(0.1, 0.1, 1.0, 0.7);
+   -moz-animation-name: spinr;
+   -moz-animation-iteration-count: infinite;
+   -moz-animation-timing-function: cubic-bezier(0.1, 0.1, 1.0, 0.7);
+   -ms-animation-name: spinr;
+   -ms-animation-iteration-count: infinite;
+   -ms-animation-timing-function: cubic-bezier(0.1, 0.1, 1.0, 0.7);
+   animation-name: spinr;
+   animation-iteration-count: infinite;
+   animation-timing-function: cubic-bezier(0.1, 0.1, 1.0, 0.7);
+}
+
+.fun-pane3 {
+   -webkit-animation-name: spinr;
+   -webkit-animation-iteration-count: infinite;
+   -webkit-animation-timing-function: cubic-bezier(0.1, 0.1, 1.0, 0.7);
+   -moz-animation-name: spinr;
+   -moz-animation-iteration-count: infinite;
+   -moz-animation-timing-function: cubic-bezier(0.1, 0.1, 1.0, 0.7);
+   -ms-animation-name: spinr;
+   -ms-animation-iteration-count: infinite;
+   -ms-animation-timing-function: cubic-bezier(0.1, 0.1, 1.0, 0.7);
+   animation-name: spinr;
+   animation-iteration-count: infinite;
+   animation-timing-function: cubic-bezier(0.1, 0.1, 1.0, 0.7);
+}
+
+@-ms-keyframes spin {
+   from { opacity: 0.0; }
+   to { opacity: 1.0; }
+}
+
+@-moz-keyframes spin {
+   from { opacity: 0.0; }
+   to { opacity: 1.0; }
+}
+
+@-webkit-keyframes spin {
+   from { opacity: 0.0; }
+   to { opacity: 1.0; }
+}
+
+@keyframes spin {
+   from { opacity: 0.0; }
+   to { opacity: 1.0; }
+}
+
+
+@-ms-keyframes spinr {
+   from { opacity: 1.0; }
+   to { opacity: 0.0; }
+}
+
+@-moz-keyframes spinr {
+   from { opacity: 1.0; }
+   to { opacity: 0.0; }
+}
+
+@-webkit-keyframes spinr {
+   from { opacity: 1.0; }
+   to { opacity: 0.0; }
+}
+
+@keyframes spinr {
+   from { opacity: 1.0; }
+   to { opacity: 0.0; }
+}
