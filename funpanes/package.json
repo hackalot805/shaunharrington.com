@@ -1,0 +1,31 @@
+{
+  "name": "backdrop",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "http://shaunharrington.com/stainedglass",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-polyfill": "^6.26.0",
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "node-sass-chokidar": "^0.0.3",
+    "react": "^16.2.0",
+    "react-bootstrap": "^0.32.1",
+    "react-dom": "^16.2.0",
+    "react-md": "^1.2.11",
+    "react-router": "^4.2.0",
+    "react-scripts": "1.0.17",
+    "react-table": "^6.7.6",
+    "webfontloader": "^1.6.28",
+    "webpack": "^3.10.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "build-css": "node-sass-chokidar --include-path ./node_modules src/ -o src/",
+    "watch-css": "npm run build-css && npm run build-css -- --watch --recursive"
+  }
+}
