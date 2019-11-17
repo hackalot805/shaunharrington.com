@@ -9,7 +9,7 @@ export default [
    },
    {
       key: 'resume',
-      primaryText: 'Resume',
+      primaryText: 'Resumé',
       leftIcon: <i className="fa fa-file-alt"></i>,
    },
    {
