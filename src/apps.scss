@@ -2,7 +2,7 @@
    margin-top: 50px;
 }
 
-.darts-panel .panel-body {
+.darts-panel .card-body {
    background-image: url("/images/darts-bg.svg");
    background-repeat: no-repeat;
    background-position: center;
@@ -23,4 +23,8 @@ header.md-background--primary {
 .note-to-users {
    font-size: .8em;
    margin-top: 40px;
+}
+
+h2 {
+   font-variation-settings: "MONO" 0.1, "CASL" 3.9, "wght" 800 , "slnt" -15;
 }

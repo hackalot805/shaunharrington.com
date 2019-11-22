@@ -22,7 +22,7 @@
   min-height: 100px;
   margin-top: 10px;
   margin-right: 5px;
-  background-color: silver;
+  background-color: #f2f2f2;
   padding: 0;
   box-shadow: 2px 2px 3px gray;
   min-width: 100px;
@@ -72,3 +72,12 @@ a.dashboard-link {
 div.md-panel-column.md-text {
   font-weight: bold;
   color: #337ab7; }
+
+.list-item-content:focus .list-item-image {
+  transform: scale(0.9); }
+
+.list-item-content:focus {
+  outline: none; }
+
+.card {
+  margin-top: 20px; }

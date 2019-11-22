@@ -1,4 +1,5 @@
-import "babel-polyfill";
+import "core-js/stable";
+import "regenerator-runtime/runtime";
 import React, { Component } from 'react';
 import sc_photo from './assets/sc.jpg';
 import sc2_photo from './assets/sc2.jpg';
@@ -16,10 +17,10 @@ import './photos.css';
 /*
                       <div className="container-fluid">
                          <div className="row">
-                            <div className='col-xs-12 col-sm-6 text-center quickFade delayOne'>
+                            <div className='col-sm-12 col-sm-6 text-center quickFade delayOne'>
                                <img src={sc_photo} />
                             </div>
-                            <div className='col-xs-12 col-sm-6 text-center quickFade delayTwo'>
+                            <div className='col-sm-12 col-sm-6 text-center quickFade delayTwo'>
                             </div>
                          </div>
                       </div>
@@ -31,7 +32,7 @@ class Photos extends Component {
        <div>
           <div className="container-fluid text-left">
              <div className="row">
-                <div className='col-xs-12 photos-wrapper'>
+                <div className='col-sm-12 photos-wrapper'>
                    <Carousel>
                       <Carousel.Item>
                          <img alt="900x500" src={sc_photo} />

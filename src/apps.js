@@ -1,4 +1,5 @@
-import "babel-polyfill";
+import "core-js/stable";
+import "regenerator-runtime/runtime";
 import React, { Component } from 'react';
 import { Card, CardTitle, CardText } from 'react-md';
 import './apps.css';
@@ -9,23 +10,23 @@ class Apps extends Component {
        <div>
           <div className="container-fluid">
              <div className="row">
-                <div className='col-xs-10 col-xs-offset-1'>
-                   <div id='tuner-panel' className="panel panel-primary dogs-panel">
-                      <div className="panel-heading text-left"><span><i id='icon2' className="fab fa-itunes-note" /></span> Audio Tools</div>
-                      <div className="panel-body">
-                         <p class="small">
+                <div className='col-sm-10 offset-sm-1'>
+                   <div id='tuner-panel' className="card dogs-panel">
+                      <div className="card-header primary text-left"><span><i id='icon2' className="fab fa-itunes-note" /></span> Audio Tools</div>
+                      <div className="card-body">
+                         <p className="small">
                             I wrote these JAVA based audio tools as a suite of promotional products for a company that wanted something to give away at trade shows.
                             Shout out to Andrew Shriepbier for the turn on to FFT. (<a href=' https://www.macworld.com/article/1025524/bbtuner.html' target='_blank' rel="noopener noreferrer">press</a>)
                          </p>
                          <div className="container-fluid">
                             <div className="row">
-                               <div className='col-xs-12 text-left md-grid'>
+                               <div className='col-sm-12 text-left md-grid'>
                                   <Card className="quickFade delayOne md-cell md-cell--4 md-cell--10-tablet">
                                      <CardTitle title="BB-Tuner" subtitle="A instrument tuner" />
                                      <CardText className='text-center'>
                                         <div className="container-fluid">
                                            <div className="row">
-                                              <div className='col-xs-12'>
+                                              <div className='col-sm-12'>
                                                  <p>
                                                     <a href="./bbtuner/bbtuner.jar">Download <i className="fa fa-download"></i></a>
                                                  </p>
@@ -42,7 +43,7 @@ class Apps extends Component {
                                      <CardText className='text-center'>
                                         <div className="container-fluid">
                                            <div className="row">
-                                              <div className='col-xs-12'>
+                                              <div className='col-sm-12'>
                                                  <p>
                                                     <a href="./bbtuner/bbtone.jar">Download <i className="fa fa-download"></i></a>
                                                  </p>
@@ -59,7 +60,7 @@ class Apps extends Component {
                                      <CardText className='text-center'>
                                         <div className="container-fluid">
                                            <div className="row">
-                                              <div className='col-xs-12'>
+                                              <div className='col-sm-12'>
                                                  <p>
                                                     <a href="./bbtuner/bbbeat.jar">Download <i className="fa fa-download"></i></a>
                                                  </p>
@@ -71,7 +72,7 @@ class Apps extends Component {
                                         </div>
                                      </CardText>
                                   </Card>
-                                  <p class="note-to-users">
+                                  <p className="note-to-users">
                                      <em><b>NOTE TO MAC USERS:</b></em> Because these are unsigned jar files,
                                      you will need to download and then launch these apps from within Finder.
                                      The Mac OS will block launching if you try to launch them from the browser.
@@ -87,13 +88,13 @@ class Apps extends Component {
 
           <div className="container-fluid">
              <div className="row">
-                <div className='col-xs-10 col-xs-offset-1'>
-                   <div className="panel panel-primary darts-panel">
-                      <div className="panel-heading text-left"><span><i id='icon1' className="fa fa-bullseye" /></span> Cricket Keeper</div>
-                      <div className="panel-body">
+                <div className='col-sm-10 offset-sm-1'>
+                   <div className="card darts-panel">
+                      <div className="card-header primary text-left"><span><i id='icon1' className="fa fa-bullseye" /></span> Cricket Keeper</div>
+                      <div className="card-body">
                          <div className="container-fluid">
                             <div className="row">
-                               <div className='col-xs-12 quickFade delayOne'>
+                               <div className='col-sm-12 quickFade delayOne'>
                                   <p>
                                      I cobbled together a free and simple PHP/HTML based score keeper page for dart players that enjoy the game of Cricket.
                                   </p>
@@ -105,16 +106,16 @@ class Apps extends Component {
                                      <li>Hit any button to score that value.</li>
                                      <li>Use the minus sign if you make a mistake.</li>
                                   </ul>
-                                  <p class="text-center gutter-5">
+                                  <p className="text-center gutter-5">
                                      You can use it here, or fork the code base, change the background image and host it on your own web site!
                                   </p>
                                </div>
                             </div>
                             <div className="row btn-row">
-                               <div className='col-xs-12 col-sm-6 text-center quickFade delayTwo'>
+                               <div className='col-sm-12 col-md-6 text-center quickFade delayTwo'>
                                   <a href="./darts/index.php" target="_blank" rel="noopener noreferrer" className='btn btn-primary btn-large full-width gutter-5'>Use Cricket Keeper <i className="fa fa-bullseye"></i></a>
                                </div>
-                               <div className='col-xs-12 col-sm-6 text-center quickFade delayTwo'>
+                               <div className='col-sm-12 col-md-6 text-center quickFade delayTwo'>
                                   <a href="https://github.com/hackalot805/cricketkeeper" target="_blank" rel="noopener noreferrer" className='btn btn-primary btn-large full-width gutter-5'>Fork Cricket Keeper <i className="fab fa-github"></i></a>
                                </div>
                             </div>

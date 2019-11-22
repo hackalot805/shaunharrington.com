@@ -1,9 +1,10 @@
-import "babel-polyfill";
+import "core-js/stable";
+import "regenerator-runtime/runtime";
 import React, { Component } from 'react';
 
 class FunPane extends Component {
    render() {
-      let { extra, size } = this.props;
+      let { extra } = this.props;
 
       let cssClass = `fun-pane ${extra}`;
 

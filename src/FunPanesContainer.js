@@ -1,4 +1,5 @@
-import "babel-polyfill";
+import "core-js/stable";
+import "regenerator-runtime/runtime";
 import React, { Component } from 'react';
 import FunPane from './FunPane';
 
@@ -23,13 +24,13 @@ class FunPanesContainer extends Component {
       for (let n = 0; n < 400; n++) {
          const randVal = Math.random();
          let cssClass = '';
-         if (parseInt(n*randVal)%2) {
+         if (parseInt(n*randVal, 10)%2) {
             cssClass = "fun-pane2";
          }
-         if (parseInt(n*randVal)%3) {
+         if (parseInt(n*randVal, 10)%3) {
             cssClass = "fun-pane3";
          }
-         if (parseInt(n*randVal)%2) {
+         if (parseInt(n*randVal, 10)%2) {
             cssClass += " fun-pane4";
          }
          panes.push (
@@ -43,7 +44,7 @@ class FunPanesContainer extends Component {
    }
 
    render() {
-      const { image, speed } = this.props;
+      const { image } = this.props;
       const { panes } = this.state;
 
       const style = {

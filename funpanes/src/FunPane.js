@@ -1,4 +1,5 @@
-import "babel-polyfill";
+import "core-js/stable";
+import "regenerator-runtime/runtime";
 import React, { Component } from 'react';
 
 class FunPane extends Component {

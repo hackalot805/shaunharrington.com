@@ -1,4 +1,5 @@
-import "babel-polyfill";
+import "core-js/stable";
+import "regenerator-runtime/runtime";
 import React, { Component } from 'react';
 import dozukilogo from './assets/dozuki-logo.png';
 import ifixitlogo from './assets/ifixit-logo.png';
@@ -10,7 +11,7 @@ class About extends Component {
        <div>
           <div className="container-fluid text-left">
              <div className="row">
-                <div className='col-xs-10  col-xs-offset-1 '>
+                <div className='col-sm-10 offset-sm-1'>
                    <h1>About Shaun Harrington</h1>
                    <section>
                       <p>
@@ -20,10 +21,10 @@ class About extends Component {
                       </p>
                       <div className="logos container-fluid">
                          <div className="row">
-                            <div className='col-xs-12 col-sm-6 text-center quickFade delayOne'>
+                            <div className='col-sm-12 col-md-6 text-center quickFade delayOne'>
                                <a href="https://www.dozuki.com" target="_blank" rel="noopener noreferrer"><img className='full-width gutter-5' src={dozukilogo} title='Dozuki' alt='Dozuki' /></a>
                             </div>
-                            <div className='col-xs-12 col-sm-6 text-center quickFade delayTwo'>
+                            <div className='col-sm-12 col-md-6 text-center quickFade delayTwo'>
                                <a href="http://www.ifixit.com" title="iFixit" target='_blank' rel="noopener noreferrer"><img className='full-width gutter-5' src={ifixitlogo} title='iFixit' alt='iFixit' /></a>
                             </div>
                          </div>
@@ -49,10 +50,10 @@ class About extends Component {
                             </p>
                             <div className="container-fluid">
                                <div className="row">
-                                  <div className='col-xs-12 col-sm-6 text-center quickFade delayThree'>
+                                  <div className='col-sm-12 col-md-6 text-center quickFade delayThree'>
                                      <a href="http://www.woodshumanesociety.org" target="_blank" rel="noopener noreferrer"><img className='btn btn-default btn-large full-width gutter-5' src='./woods-logo.png' title='Woods Humane Society' alt='Woods Humane Society' /></a>
                                   </div>
-                                  <div className='col-xs-12 col-sm-6 text-center quickFade delayFour'>
+                                  <div className='col-sm-12 col-md-6 text-center quickFade delayFour'>
                                      <a href="https://smvhs.org" title="iFixit" target='_blank' rel="noopener noreferrer"><img className='btn btn-default btn-large full-width gutter-5' src='./smvhs-logo.png' title='Santa Maria Valley Humane Society' alt='Santa Maria Valley Humane Society' /></a>
                                   </div>
                                </div>

@@ -1,4 +1,5 @@
-import "babel-polyfill";
+import "core-js/stable";
+import "regenerator-runtime/runtime";
 import React, { Component } from 'react';
 import { ExpansionList, ExpansionPanel } from 'react-md';
 import './code.css';
@@ -31,6 +32,7 @@ class Code extends Component {
    };
 
    render() {
+/*
       const years = Array.from({length: 50}, (v, k) => k + 2018);
       const easterString = years.map((year) => {
          const easter = this.getEaster(year);
@@ -40,9 +42,9 @@ class Code extends Component {
           </span>
          );
       });
-
+*/
       const buttons = {
-         'github-cricket': {'title': 'Cricket Keeper', icon: 'fa fa-bullseye', url: 'https://github.com/hackalot805/cricketkeeper'},
+         'github-cricket': {'title': 'Cricket', icon: 'fa fa-bullseye', url: 'https://github.com/hackalot805/cricketkeeper'},
          'github-bbtuner': {'title': 'BB-Tuner', icon: 'fab fa-itunes-note', url: 'https://github.com/hackalot805/bbtuner'},
          'github-bbtone': {'title': 'BB-Tone', icon: 'fa fa-volume-up', url: 'https://github.com/hackalot805/bbtone'},
          'github-bbbeat': {'title': 'BB-Beat', icon: 'fa fa-headphones', url: 'https://github.com/hackalot805/bbbeat'},
@@ -54,14 +56,14 @@ class Code extends Component {
          const button = buttons[key];
          return (
           <div key={button.title} className='list-item'>
-             <div className='btn btn-default btn-large list-item-content' onClick={() => this.handleClick(button.url)}>
+             <button className='btn btn-default btn-large list-item-content' onClick={() => this.handleClick(button.url)}>
                 <div className='list-item-title' title={button.title}>
                    {button.title}
                 </div>
                 <div className="list-item-image">
                    <i className={button.icon} />
                 </div>
-             </div>
+             </button>
           </div>
          );
       });
@@ -76,10 +78,10 @@ class Code extends Component {
        <div>
           <div className="container-fluid">
              <div className="row">
-                <div className='col-xs-10 col-xs-offset-1'>
-                   <div className="panel panel-primary dogs-panel">
-                      <div className="panel-heading text-left"><span><i id='icon1' className="fa fa-code" /></span> Code</div>
-                      <div className="panel-body">
+                <div className='col-sm-10 offset-sm-1'>
+                   <div className="card dogs-panel">
+                      <div className="card-header primary text-left"><span><i id='icon1' className="fa fa-code" /></span> Code</div>
+                      <div className="card-body">
                          <p>
                             Most of the interesting code that I have produced is proprietary, and I can't share it. This is what's left...
                          </p>
@@ -87,17 +89,20 @@ class Code extends Component {
                             <div className="list-container">
                                {buttonItems}
                             </div>
-                            <p class="text-center text-muted small">
+                            <p className="text-center text-muted small">
                                (<em>Click on a button to visit the GitHub repository.</em>)
                             </p>
                          </section>
-                         <div className="panel panel-default">
-                            <div className="panel-heading text-left"><span><i id='icon1' className="fa fa-cut" /></span> Snippets</div>
-                            <div className="panel-body">
-                               <ExpansionList className='md-cell md-cell--12'>
-                                  <ExpansionPanel label="getEaster() JavaScript Function" footer={<CustomFooter codePenUrl='//codepen.io/hackalot805/pen/XZwXeN' />}>
-                                     <p>Based on my understanding of how to compute Easter.  I wrote this for a calendar generating program that I developed many years ago.</p>
-                                     <pre>
+                      </div>
+                   </div>
+
+                   <div className="card">
+                      <div className="card-header primary text-left"><span><i id='icon1' className="fa fa-cut" /></span> Snippets</div>
+                      <div className="card-body">
+                         <ExpansionList className='md-cell md-cell--12'>
+                            <ExpansionPanel label="'getEaster()' JavaScript Function" footer={<CustomFooter codePenUrl='//codepen.io/hackalot805/pen/XZwXeN' />}>
+                               <p>Based on my understanding of how to compute Easter.  I wrote this for a calendar generating program that I developed many years ago.</p>
+                               <pre>
                                         <code>
                               {`
 getEaster(currentYear) {
@@ -122,35 +127,49 @@ getEaster(currentYear) {
                               `}
                                         </code>
                                      </pre>
-                                  </ExpansionPanel>
-                               </ExpansionList>
-                            </div>
-                         </div>
-                         <div className="panel panel-default">
-                            <div className="panel-heading text-left"><span><i id='icon2' className="fa fa-newspaper" /></span> Articles</div>
-                            <div className="panel-body">
-                               <ExpansionList className='md-cell md-cell--12'>
-                                  <ExpansionPanel label="CodeProject" footer={null}>
-                                     <p>
-                                        <img src='https://icon-icons.com/icons2/801/PNG/512/CODEPROJECT_icon-icons.com_65877.png' style={{width: 20, top: -2, position: 'relative'}} />
-                                        Mostly old C++ code for obsolete Win32 platforms.
-                                     </p>
-
-                                     <ul>
-                                        <li><a href="https://www.codeproject.com/Articles/14634/A-Cool-Way-to-Navigate-Your-Start-Menu-that-Integr" target='_blank' rel="noopener noreferrer">Taskbar Extension</a></li>
-                                        <li><a href="https://www.codeproject.com/Articles/5113/A-Context-Menu-Handler-for-Windows-Users-That-Can" target='_blank' rel="noopener noreferrer">Context Menu Handler</a></li>
-                                        <li><a href="https://www.codeproject.com/Articles/8302/WinDiff-or-WinMerge-the-way-you-want-it" target='_blank' rel="noopener noreferrer">Another Context Menu Extension</a></li>
-                                        <li><a href="https://www.codeproject.com/Articles/15258/A-user-configurable-Idle-Computer-Notification-too" target='_blank' rel="noopener noreferrer">Idle Detection Win32 App</a></li>
-                                        <li><a href="https://www.codeproject.com/Articles/14411/A-Perpetual-Calendar-Generator-well-at-least-until" target='_blank' rel="noopener noreferrer">Win32 Desktop Calendar Generator</a></li>
-                                        <li><a href="https://www.codeproject.com/Articles/14952/A-simple-class-for-converting-numbers-into-a-strin" target='_blank' rel="noopener noreferrer">C++ Number Class</a></li>
-                                        <li><a href="https://www.codeproject.com/script/Membership/View.aspx?mid=451209" target='_blank' rel="noopener noreferrer">CodeProject Profile</a></li>
-                                     </ul>
-                                  </ExpansionPanel>
-                               </ExpansionList>
-                            </div>
-                         </div>
+                            </ExpansionPanel>
+                         </ExpansionList>
+                         <ExpansionList className='md-cell md-cell--12'>
+                            <ExpansionPanel label="'any_in_array()' PHP Function" footer={null}>
+                               <p>Simple method to determine if any element single element from one array exists in another.</p>
+                               <pre>
+                                        <code>
+                              {`
+   function any_in_array(array $needles, array $haystack): bool {
+      return !empty(array_intersect($needles, $haystack));
+   }
+                              `}
+                                        </code>
+                                     </pre>
+                            </ExpansionPanel>
+                         </ExpansionList>
                       </div>
                    </div>
+
+                   <div className="card">
+                      <div className="card-header primary text-left"><span><i id='icon2' className="fa fa-newspaper" /></span> Articles</div>
+                      <div className="card-body">
+                         <ExpansionList className='md-cell md-cell--12'>
+                            <ExpansionPanel label="CodeProject" footer={null}>
+                               <p>
+                                  <img alt='' src='https://icon-icons.com/icons2/801/PNG/512/CODEPROJECT_icon-icons.com_65877.png' style={{width: 20, top: -2, position: 'relative'}} />
+                                  Mostly old C++ code for obsolete Win32 platforms.
+                               </p>
+
+                               <ul>
+                                  <li><a href="https://www.codeproject.com/Articles/14634/A-Cool-Way-to-Navigate-Your-Start-Menu-that-Integr" target='_blank' rel="noopener noreferrer">Taskbar Extension</a></li>
+                                  <li><a href="https://www.codeproject.com/Articles/5113/A-Context-Menu-Handler-for-Windows-Users-That-Can" target='_blank' rel="noopener noreferrer">Context Menu Handler</a></li>
+                                  <li><a href="https://www.codeproject.com/Articles/8302/WinDiff-or-WinMerge-the-way-you-want-it" target='_blank' rel="noopener noreferrer">Another Context Menu Extension</a></li>
+                                  <li><a href="https://www.codeproject.com/Articles/15258/A-user-configurable-Idle-Computer-Notification-too" target='_blank' rel="noopener noreferrer">Idle Detection Win32 App</a></li>
+                                  <li><a href="https://www.codeproject.com/Articles/14411/A-Perpetual-Calendar-Generator-well-at-least-until" target='_blank' rel="noopener noreferrer">Win32 Desktop Calendar Generator</a></li>
+                                  <li><a href="https://www.codeproject.com/Articles/14952/A-simple-class-for-converting-numbers-into-a-strin" target='_blank' rel="noopener noreferrer">C++ Number Class</a></li>
+                                  <li><a href="https://www.codeproject.com/script/Membership/View.aspx?mid=451209" target='_blank' rel="noopener noreferrer">CodeProject Profile</a></li>
+                               </ul>
+                            </ExpansionPanel>
+                         </ExpansionList>
+                      </div>
+                   </div>
+
                 </div>
              </div>
           </div>

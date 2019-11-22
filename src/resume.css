@@ -1,6 +1,10 @@
 .headerButton {
   width: 45px;
-  font-size: 1.1em; }
+  font-size: 1.1em;
+  margin-left: 1px; }
+
+.md-btn--text {
+  min-width: auto; }
 
 .mainDetails {
   padding: 25px 15px 20px;

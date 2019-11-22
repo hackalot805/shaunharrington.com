@@ -1,7 +1,9 @@
-import "babel-polyfill";
+import "core-js/stable";
+import "regenerator-runtime/runtime";
 import React, { Component } from 'react';
 import headshot from './assets/headshot.jpg';
 import './resume.css';
+import { Button } from 'react-md';
 
 class Resume extends Component {
    onClick = (url) => {
@@ -32,11 +34,11 @@ class Resume extends Component {
                             <li>w: <a href="http://www.shaunharrington.com/">www.shaunharrington.com</a></li>
                             <li>m: (805) 441-7875</li>
                             <li>
-                               <button className='headerButton btn btn-primary' onClick={this.onClick.bind(this, './ShaunHarringtonResume.pdf')} title="PDF Resume"><i className="fas fa-file-pdf"></i></button>
-                               <button className='headerButton btn btn-primary' onClick={this.onClick.bind(this, './shaunharrington.vcf')} title="VCard"><i className="fas fa-address-card"></i></button>
-                               <button className='headerButton btn btn-primary' onClick={this.onClick.bind(this, 'https://www.linkedin.com/in/shaunharrington')} title="LinkedIn"><i className="fab fa-linkedin"></i></button>
-                               <button className='headerButton btn btn-primary' onClick={this.onClick.bind(this, 'https://github.com/hackalot805')} title="GitHub"><i className="fab fa-github"></i></button>
-                               <button className='headerButton btn btn-primary' onClick={this.onClick.bind(this, 'https://shaunharrington.slack.com')} title="Slack"><i className="fab fa-slack-hash"></i></button>
+                               <Button flat primary onClick={this.onClick.bind(this, './ShaunHarringtonResume.pdf')} title="PDF Resume"><i className="fas fa-file-pdf"></i></Button>
+                               <Button flat primary onClick={this.onClick.bind(this, './shaunharrington.vcf')} title="VCard"><i className="fas fa-address-card"></i></Button>
+                               <Button flat primary onClick={this.onClick.bind(this, 'https://www.linkedin.com/in/shaunharrington')} title="LinkedIn"><i className="fab fa-linkedin"></i></Button>
+                               <Button flat primary onClick={this.onClick.bind(this, 'https://github.com/hackalot805')} title="GitHub"><i className="fab fa-github"></i></Button>
+                               <Button flat primary onClick={this.onClick.bind(this, 'https://shaunharrington.slack.com')} title="Slack"><i className="fab fa-slack-hash"></i></Button>
                             </li>
                          </ul>
                       </div>

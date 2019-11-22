@@ -1,5 +1,7 @@
 @import 'globals';
 
+$enable-gradients: true;
+
 @font-face {
   font-family: 'Recursive';
   src: local('Recursive'), url(./fonts/recursive-MONO_CASL_wght_slnt_ital--2019_11_05-00_13.ttf) format('truetype');
@@ -29,11 +31,20 @@ button,
 input,
 textarea,
 html {
-  font-family: "Recursive", "Roboto", sans-serif; }
+  font-family: "Recursive", "Roboto", sans-serif;
+}
 
 .md-background--primary {
   background: $md-primary-color;
 }
 .md-text--theme-primary {
   color: $md-primary-color;
+}
+
+.card-header {
+  font-variation-settings: "MONO" .3, "CASL" .1, "wght" 500;
+}
+
+.card .primary {
+  background: #f0ffeb;
 }
