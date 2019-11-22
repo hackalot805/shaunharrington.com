@@ -94,16 +94,37 @@ class App extends Component {
 
 // <img src={logo} className='App-logo' alt='react-logo' /><img src={angularLogo} className='App-logo Angular-logo' alt='angular-logo' />&nbsp;&nbsp;&nbsp;<img src={nodejsLogo} className='App-logo Nodejs-logo' alt='nodejs-logo' />
 // <a href='https://aws.amazon.com' title='Amazon Web Services' target='_blank' rel="noopener noreferrer"><i className="App-logo fab fa-aws"></i></a><a href='https://nodejs.org' title='NodeJS' target='_blank' rel="noopener noreferrer"><i className="App-logo fab fa-node-js"></i></a><a href='https://reactjs.org' title='ReactJS' target='_blank' rel="noopener noreferrer"><i className="App-logo fab fa-react"></i></a><a href='https://angular.io' title='Angular' target='_blank' rel="noopener noreferrer"><i className="App-logo fab fa-angular"></i></a>
-     return (
-       <NavigationDrawer drawerTitle={<p>Shaun Harrington <img src={harringtonLogo} className='App-logo Harrington-logo' alt='harrington-logo' /></p>} toolbarTitle={<div></div>} navItems={this.navItems}>
-         <div className="App">
-            {content}
+      return (
+         <NavigationDrawer drawerTitle={<p>Shaun Harrington <img src={harringtonLogo} className='App-logo Harrington-logo' alt='harrington-logo' /></p>} toolbarTitle={<div></div>} navItems={this.navItems}>
+            <div className="App">
+               {content}
+               <footer className="page-content">
+                  <div className="container-fluid">
+                     <div className="row">
+                        <div className="col-sm-12">
+                           <p className="text-center text-muted gutter-5 remove-bottom">
+                              <Button flat variant="primary" onClick={handleShow}>
+                                 Acknowledgments
+                              </Button>
+                           </p>
+                           <p className="text-center text-muted remove-top remove-bottom copyright">
+                              &copy; {year} Shaun Harrington, All rights reserved.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+               </footer>
+            </div>
             <Modal show={show} onHide={handleClose}>
                <Modal.Header closeButton>
                   <Modal.Title>Acknowledgments</Modal.Title>
                </Modal.Header>
                <Modal.Body>
-                  <small>Site bootstrapped with <a target="_blank" rel="noopener noreferrer" href="https://github.com/facebookincubator/create-react-app">'Create React App'</a>.</small>
+                  <ul>
+                     <li><small>Bootstrapped using <a target="_blank" rel="noopener noreferrer" href="https://github.com/facebookincubator/create-react-app">'Create React App'</a></small></li>
+                     <li><small>Text displayed using the <a target="_blank" rel="noopener noreferrer" href="https://www.recursive.design/">'Recursive Sans && Mono'</a> typeface</small></li>
+                     <li><small>Material design provided by the <a target="_blank" rel="noopener noreferrer" href="https://react-md.mlaursen.com/">'react-md'</a> package</small></li>
+                  </ul>
                </Modal.Body>
                <Modal.Footer>
                   <Button flat variant="secondary" onClick={handleClose}>
@@ -111,24 +132,7 @@ class App extends Component {
                   </Button>
                </Modal.Footer>
             </Modal>
-            <footer className="page-content">
-               <div className="container-fluid">
-                  <div className="row">
-                     <div className="col-sm-12">
-                        <p className="text-center text-muted gutter-5 remove-bottom">
-                           <Button flat variant="primary" onClick={handleShow}>
-                              Acknowledgments
-                           </Button>
-                        </p>
-                        <p className="text-center text-muted remove-top remove-bottom copyright">
-                           &copy; {year} Shaun Harrington, All rights reserved.
-                        </p>
-                     </div>
-                  </div>
-               </div>
-            </footer>
-         </div>
-      </NavigationDrawer>
+         </NavigationDrawer>
       );
    }
 }
