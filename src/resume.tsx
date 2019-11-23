@@ -7,6 +7,30 @@ import styled from 'styled-components';
 
 import './resume.css';
 
+const MdButtonText = styled(Button) `
+   min-width: inherit;
+`;
+
+const MainDetails = styled.div`
+   padding: 25px 15px 20px;
+   border: solid 1px #e0e0e0;
+   border-bottom: 2px solid silver;
+   background: #edede6;
+`;
+
+const NameH1 = styled.h1`
+   font-size: 2.5em;
+   font-weight: 700;
+   font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
+   margin-bottom: -6px;
+`;
+
+const NameH2 = styled.h2`
+   font-size: 2em;
+   margin-left: 2px;
+   font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
+`;
+
 class Resume extends Component {
    onClick = (url: string) => {
       window.open(url);
@@ -20,14 +44,14 @@ class Resume extends Component {
           <div className="container-fluid" id="page_main">
              <div className="row">
                 <div className="col-sm-12 col-md-offset-0">
-                   <div className="mainDetails quickFade delayOne">
+                   <MainDetails className="quickFade delayOne">
                       <div id="headshot">
                          <img src={headshot} alt="Shaun Harrington" />
                       </div>
 
                       <div id="name">
-                         <h1 className="quickFade delayTwo">Shaun Harrington</h1>
-                         <h2 className="quickFade delayThree">Software Developer</h2>
+                         <NameH1 className="quickFade delayTwo">Shaun Harrington</NameH1>
+                         <NameH2 className="quickFade delayThree">Software Developer</NameH2>
                       </div>
 
                       <div id="contactDetails" className="quickFade delayFour">
@@ -36,16 +60,16 @@ class Resume extends Component {
                             <li>w: <a href="http://www.shaunharrington.com/">www.shaunharrington.com</a></li>
                             <li>m: (805) 441-7875</li>
                             <li>
-                               <Button flat primary onClick={this.onClick.bind(this, './ShaunHarringtonResume.pdf')} title="PDF Resume"><i className="fas fa-file-pdf"></i></Button>
-                               <Button flat primary onClick={this.onClick.bind(this, './shaunharrington.vcf')} title="VCard"><i className="fas fa-address-card"></i></Button>
-                               <Button flat primary onClick={this.onClick.bind(this, 'https://www.linkedin.com/in/shaunharrington')} title="LinkedIn"><i className="fab fa-linkedin"></i></Button>
-                               <Button flat primary onClick={this.onClick.bind(this, 'https://github.com/hackalot805')} title="GitHub"><i className="fab fa-github"></i></Button>
-                               <Button flat primary onClick={this.onClick.bind(this, 'https://shaunharrington.slack.com')} title="Slack"><i className="fab fa-slack-hash"></i></Button>
+                               <MdButtonText flat primary onClick={this.onClick.bind(this, './ShaunHarringtonResume.pdf')} title="PDF Resume"><i className="fas fa-file-pdf"></i></MdButtonText>
+                               <MdButtonText flat primary onClick={this.onClick.bind(this, './shaunharrington.vcf')} title="VCard"><i className="fas fa-address-card"></i></MdButtonText>
+                               <MdButtonText flat primary onClick={this.onClick.bind(this, 'https://www.linkedin.com/in/shaunharrington')} title="LinkedIn"><i className="fab fa-linkedin"></i></MdButtonText>
+                               <MdButtonText flat primary onClick={this.onClick.bind(this, 'https://github.com/hackalot805')} title="GitHub"><i className="fab fa-github"></i></MdButtonText>
+                               <MdButtonText flat primary onClick={this.onClick.bind(this, 'https://shaunharrington.slack.com')} title="Slack"><i className="fab fa-slack-hash"></i></MdButtonText>
                             </li>
                          </ul>
                       </div>
                       <div className="clear"></div>
-                   </div>
+                   </MainDetails>
                 </div>
              </div>
              <div className="row">
