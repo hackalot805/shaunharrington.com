@@ -2,7 +2,28 @@ import "core-js/stable";
 import "regenerator-runtime/runtime";
 import React, { Component } from 'react';
 import { Card, CardTitle, CardText } from 'react-md';
-import './apps.css';
+import styled from 'styled-components';
+
+const NoteToUsers =  styled.div`
+   font-size: .8em;
+   margin-top: 40px;
+`;
+
+const ProductCardTitle = styled(CardTitle)`
+   font-variation-settings: "MONO" 0.1, "CASL" 3.9, "wght" 800 , "slnt" -15;
+`;
+
+const BtnRow = styled.div`
+   margin-bottom: 18px;
+`;
+
+const DartsPanel = styled.div`
+   background-image: url("/images/darts-bg.svg");
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: 100% auto;
+   margin-top: 50px;
+`;
 
 class Apps extends Component {
    render() {
@@ -12,7 +33,7 @@ class Apps extends Component {
              <div className="row">
                 <div className='col-sm-10 offset-sm-1'>
                    <div id='tuner-panel' className="card dogs-panel">
-                      <div className="card-header primary text-left"><span><i id='icon2' className="fab fa-itunes-note" /></span> Audio Tools</div>
+                      <div className="card-header primary text-left"><span><i id='icon-audio' className="fab fa-itunes-note" /></span> Audio Tools</div>
                       <div className="card-body">
                          <p className="small">
                             I wrote these JAVA based audio tools as a suite of promotional products for a company that wanted something to give away at trade shows.
@@ -22,7 +43,7 @@ class Apps extends Component {
                             <div className="row">
                                <div className='col-sm-12 text-left md-grid'>
                                   <Card className="quickFade delayOne md-cell md-cell--4 md-cell--10-tablet">
-                                     <CardTitle title="BB-Tuner" subtitle="A instrument tuner" />
+                                     <ProductCardTitle title="BB-Tuner" subtitle="A instrument tuner" />
                                      <CardText className='text-center'>
                                         <div className="container-fluid">
                                            <div className="row">
@@ -39,7 +60,7 @@ class Apps extends Component {
                                      </CardText>
                                   </Card>
                                   <Card className="quickFade delayTwo md-cell md-cell--4 md-cell--10-tablet">
-                                     <CardTitle title="BB-Tone" subtitle="A simple tone generator" />
+                                     <ProductCardTitle title="BB-Tone" subtitle="A simple tone generator" />
                                      <CardText className='text-center'>
                                         <div className="container-fluid">
                                            <div className="row">
@@ -56,7 +77,7 @@ class Apps extends Component {
                                      </CardText>
                                   </Card>
                                   <Card className="quickFade delayThree md-cell md-cell--4 md-cell--10-tablet">
-                                     <CardTitle title="BB-Beat" subtitle="A variable beat generator" />
+                                     <ProductCardTitle title="BB-Beat" subtitle="A simple beat generator" />
                                      <CardText className='text-center'>
                                         <div className="container-fluid">
                                            <div className="row">
@@ -72,11 +93,11 @@ class Apps extends Component {
                                         </div>
                                      </CardText>
                                   </Card>
-                                  <p className="note-to-users">
+                                  <NoteToUsers>
                                      <em><b>NOTE TO MAC USERS:</b></em> Because these are unsigned jar files,
                                      you will need to download and then launch these apps from within Finder.
                                      The Mac OS will block launching if you try to launch them from the browser.
-                                  </p>
+                                  </NoteToUsers>
                                </div>
                             </div>
                          </div>
@@ -89,7 +110,7 @@ class Apps extends Component {
           <div className="container-fluid">
              <div className="row">
                 <div className='col-sm-10 offset-sm-1'>
-                   <div className="card darts-panel">
+                   <DartsPanel className="card">
                       <div className="card-header primary text-left"><span><i id='icon1' className="fa fa-bullseye" /></span> Cricket Keeper</div>
                       <div className="card-body">
                          <div className="container-fluid">
@@ -111,17 +132,17 @@ class Apps extends Component {
                                   </p>
                                </div>
                             </div>
-                            <div className="row btn-row">
+                            <BtnRow className="row">
                                <div className='col-sm-12 col-md-6 text-center quickFade delayTwo'>
                                   <a href="./darts/index.php" target="_blank" rel="noopener noreferrer" className='btn btn-primary btn-large full-width gutter-5'>Use Cricket Keeper <i className="fa fa-bullseye"></i></a>
                                </div>
                                <div className='col-sm-12 col-md-6 text-center quickFade delayTwo'>
                                   <a href="https://github.com/hackalot805/cricketkeeper" target="_blank" rel="noopener noreferrer" className='btn btn-primary btn-large full-width gutter-5'>Fork Cricket Keeper <i className="fab fa-github"></i></a>
                                </div>
-                            </div>
+                            </BtnRow>
                          </div>
                       </div>
-                   </div>
+                   </DartsPanel>
                 </div>
              </div>
           </div>
