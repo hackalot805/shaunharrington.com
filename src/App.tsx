@@ -112,10 +112,7 @@ class App extends Component<AppProps, AppState> {
          content = (
           <Playground />
          );
-      } else {
-         // TODO: 404
       }
-      const year = new Date().getFullYear();
 
       const handleClose = () => {
          this.setState({show: false})
@@ -124,6 +121,8 @@ class App extends Component<AppProps, AppState> {
       const handleShow = () => {
          this.setState({show: true})
       };
+
+      const year = new Date().getFullYear();
 
       return (
          <ThemeProvider theme={theme}>
