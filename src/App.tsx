@@ -35,6 +35,11 @@ const Copyright = styled.p`
    font-size: .8em;
 `;
 
+const Footer = styled.footer`
+   margin-top: 5px;
+   color: silver;
+`;
+
 interface NavItemProps {
    key: string,
    primaryText: string,
@@ -127,7 +132,7 @@ class App extends Component<AppProps, AppState> {
             <NavigationDrawer drawerTitle={<p>Shaun Harrington <AppLogo src={harringtonLogo} alt='harrington-logo' /></p>} toolbarTitle={<div></div>} navItems={this.navItems}>
                <AppLeft>
                   {content}
-                  <footer className="page-content">
+                  <Footer className="page-content">
                      <div className="container-fluid">
                         <div className="row">
                            <div className="col-sm-12">
@@ -142,7 +147,7 @@ class App extends Component<AppProps, AppState> {
                            </div>
                         </div>
                      </div>
-                  </footer>
+                  </Footer>
                </AppLeft>
                <Modal show={show} onHide={handleClose}>
                   <Modal.Header closeButton>
