@@ -13,8 +13,6 @@ import Playground from './playground';
 import styled, { ThemeProvider } from 'styled-components';
 import harringtonLogo from './assets/Harrington.svg';
 
-import './App.css';
-
 const theme = {
    spinningIconColor: "#8bc34a",
    panelGap: "50px",

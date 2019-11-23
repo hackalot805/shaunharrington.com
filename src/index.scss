@@ -14,10 +14,10 @@ $md-secondary-color: $md-lime-a-400;
 @include react-md-everything;
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Recursive', sans-serif;
-  font-variation-settings: "MONO" .1, "CASL" .2;
+   margin: 0;
+   padding: 0;
+   font-family: 'Recursive', sans-serif;
+   font-variation-settings: "MONO" .1, "CASL" .2;
 }
 
 h1,
@@ -31,20 +31,278 @@ button,
 input,
 textarea,
 html {
-  font-family: "Recursive", "Roboto", sans-serif;
+   font-family: "Recursive", "Roboto", sans-serif;
 }
 
 .md-background--primary {
-  background: $md-primary-color;
+   background: $md-primary-color;
 }
 .md-text--theme-primary {
-  color: $md-primary-color;
+   color: $md-primary-color;
+}
+
+.md-tile-addon--icon {
+   width: 20px;
+}
+
+header.md-background--primary {
+   background-image: url("/images/eyes.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center center;
 }
 
 .card-header {
-  font-variation-settings: "MONO" .3, "CASL" .1, "wght" 500;
+   font-variation-settings: "MONO" .3, "CASL" .1, "wght" 500;
 }
 
 .card-header.primary {
-  background: #f0ffeb;
+   background: #f0ffeb;
+}
+
+@keyframes App-logo-spin {
+   from {
+      transform: rotate(0deg);
+   }
+   to {
+      transform: rotate(360deg);
+   }
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+   display: block;
+}
+
+html, body {
+   background: white;
+   font-family: 'Recursive', 'Lato', helvetica, arial, sans-serif;
+   font-size: 16px;
+   color: #222;
+}
+
+body {
+   padding-top: 15px;
+}
+
+h1 {
+   font-size: 1.2em;
+   font-weight: bold;
+}
+
+footer {
+   margin-top: 5px;
+   color: silver;
+}
+
+.text-muted {
+   color: #AAA;
+}
+
+.clear {
+   clear: both;
+}
+
+p {
+   font-size: 1em;
+   line-height: 1.4em;
+   margin-bottom: 20px;
+   color: #444;
+}
+
+#cv {
+   width: 90%;
+   max-width: 800px;
+   background: #f3f3f3;
+   margin: 30px auto;
+}
+
+img.full-width {
+   width: 60%;
+   height: auto;
+}
+
+.gutter-5 {
+   margin: 20px auto;
+}
+
+section {
+   border-top: 1px solid #deded1;
+   padding: 20px 0 0;
+}
+
+section:first-child {
+   border-top: 0;
+}
+
+section:last-child {
+   padding: 20px 0 10px;
+}
+
+@media all and (max-width: 767px) {
+   .App-logo {
+      height: 54px;
+      margin-top: 0;
+      margin-right: 30px;
+   }
+
+   .Harrington-logo {
+      height: 45px;
+      margin-left: 30px;
+   }
+}
+
+@media all and (max-width: 480px) {
+   .headerButton {
+      width: 60px;
+   }
+
+   .mainDetails {
+      padding: 15px 15px;
+   }
+
+   section {
+      padding: 15px 0 0;
+   }
+
+   #mainArea {
+      padding: 0 25px;
+   }
+
+   .keySkills {
+      -moz-column-count: 1;
+      -webkit-column-count: 1;
+      column-count: 1;
+   }
+
+   #name h1 {
+      line-height: .8em;
+      margin-bottom: 4px;
+   }
+}
+
+@media print {
+   #cv {
+      width: 100%;
+   }
+}
+
+@-webkit-keyframes reset {
+   0% {
+      opacity: 0;
+   }
+   100% {
+      opacity: 0;
+   }
+}
+
+@-webkit-keyframes fade-in {
+   0% {
+      opacity: 0;
+   }
+   40% {
+      opacity: 0;
+   }
+   100% {
+      opacity: 1;
+   }
+}
+
+@-moz-keyframes reset {
+   0% {
+      opacity: 0;
+   }
+   100% {
+      opacity: 0;
+   }
+}
+
+@-moz-keyframes fade-in {
+   0% {
+      opacity: 0;
+   }
+   40% {
+      opacity: 0;
+   }
+   100% {
+      opacity: 1;
+   }
+}
+
+@keyframes reset {
+   0% {
+      opacity: 0;
+   }
+   100% {
+      opacity: 0;
+   }
+}
+
+@keyframes fade-in {
+   0% {
+      opacity: 0;
+   }
+   40% {
+      opacity: 0;
+   }
+   100% {
+      opacity: 1;
+   }
+}
+
+.instaFade {
+   -webkit-animation-name: reset, fade-in;
+   -webkit-animation-duration: 1.5s;
+   -webkit-animation-timing-function: ease-in;
+
+   -moz-animation-name: reset, fade-in;
+   -moz-animation-duration: 1.5s;
+   -moz-animation-timing-function: ease-in;
+
+   animation-name: reset, fade-in;
+   animation-duration: 1.5s;
+   animation-timing-function: ease-in;
+}
+
+.quickFade {
+   -webkit-animation-name: reset, fade-in;
+   -webkit-animation-duration: 1.2s;
+   -webkit-animation-timing-function: ease-in;
+
+   -moz-animation-name: reset, fade-in;
+   -moz-animation-duration: 1.2s;
+   -moz-animation-timing-function: ease-in;
+
+   animation-name: reset, fade-in;
+   animation-duration: 1.2s;
+   animation-timing-function: ease-in;
+}
+
+.delayOne {
+   -webkit-animation-delay: 0, .2s;
+   -moz-animation-delay: 0, .2s;
+   animation-delay: 0, .2s;
+}
+
+.delayTwo {
+   -webkit-animation-delay: 0, .4s;
+   -moz-animation-delay: 0, .4s;
+   animation-delay: 0, .4s;
+}
+
+.delayThree {
+   -webkit-animation-delay: 0, .6s;
+   -moz-animation-delay: 0, .6s;
+   animation-delay: 0, .6s;
+}
+
+.delayFour {
+   -webkit-animation-delay: 0, .8s;
+   -moz-animation-delay: 0, .8s;
+   animation-delay: 0, .8s;
+}
+
+.delayFive {
+   -webkit-animation-delay: 0, 1s;
+   -moz-animation-delay: 0, 1s;
+   animation-delay: 0, 1s;
 }
