@@ -1,16 +1,15 @@
 import "core-js/stable";
 import "regenerator-runtime/runtime";
 import React, { Component } from 'react';
-import { NavigationDrawer } from 'react-md';
-import { Button } from 'react-md';
-import inboxListItems from './inboxListItems';
+import { Button, NavigationDrawer } from 'react-md';
+import { Modal } from 'react-bootstrap';
+import InboxListItems from './inboxListItems';
 import Apps from './apps';
 import About from './about';
 import Code from './code';
 import Resume from './resume';
 import Photos from './photos';
 import Playground from './playground';
-import { Modal } from 'react-bootstrap';
 import styled, { ThemeProvider } from 'styled-components';
 import harringtonLogo from './assets/Harrington.svg';
 
@@ -34,36 +33,52 @@ const AppLogo = styled.img`
    margin-right: ${props => props.theme.panelGap};
 `;
 
-class App extends Component {
-   constructor() {
-      super();
-      this.navItems = inboxListItems.map((item) => {
-         if (item.divider) {
-            return item;
-         }
+const Copyright = styled.p`
+   font-size: .8em;
+`;
 
+interface NavItemProps {
+   key: string,
+   primaryText: string,
+   leftIcon: JSX.Element,
+   active?: boolean,
+}
+
+interface AppProps {
+}
+
+interface AppState {
+   key: string,
+   page: string,
+   visible: boolean,
+   show: boolean,
+}
+
+class App extends Component<AppProps, AppState> {
+   navItems: NavItemProps[] = [];
+
+   constructor(props: AppProps) {
+      super(props);
+
+      this.navItems = InboxListItems.map((item) => {
          return {
             ...item,
             onClick: () => this.setPage(item.key, item.primaryText),
          };
       });
 
+      console.log(InboxListItems[0]);
       this.state = {
-         renderNode: null,
          visible: false,
-         key: inboxListItems[0].key,
-         page: inboxListItems[0].primaryText,
+         key: InboxListItems[0].key,
+         page: InboxListItems[0].primaryText,
          show: false,
       };
    };
 
-   setPage = (key, page) => {
+   setPage = (key: string, page: string) => {
       window.scrollTo(0,0);
       this.navItems = this.navItems.map((item) => {
-         if (item.divider) {
-            return item;
-         }
-
          return { ...item, active: item.key === key };
       });
 
@@ -71,9 +86,9 @@ class App extends Component {
    };
 
    render() {
-      const { /*visible, page, renderNode,*/ key } = this.state;
+      const { show, key } = this.state;
 
-      let content = '';
+      let content: JSX.Element | null = null;
       if (key === 'apps') {
          content = (
           <Apps />
@@ -103,8 +118,6 @@ class App extends Component {
       }
       const year = new Date().getFullYear();
 
-      const { show  } = this.state;
-
       const handleClose = () => {
          this.setState({show: false})
       };
@@ -127,9 +140,9 @@ class App extends Component {
                                     Acknowledgments
                                  </Button>
                               </p>
-                              <p className="text-center text-muted remove-top remove-bottom copyright">
+                              <Copyright className="text-center text-muted remove-top remove-bottom">
                                  &copy; {year} Shaun Harrington, All rights reserved.
-                              </p>
+                              </Copyright>
                            </div>
                         </div>
                      </div>
