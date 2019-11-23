@@ -13,8 +13,6 @@ import buddy_photo from './assets/buddy.jpg';
 import { Carousel } from 'react-bootstrap';
 import styled from 'styled-components';
 
-import './photos.css';
-
 const CarouselItemImg = styled.img`
    width: 100%;
 `;
