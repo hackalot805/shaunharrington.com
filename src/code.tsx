@@ -75,11 +75,30 @@ const Card = styled.div`
    margin-top: 50px;
 `;
 
+interface ButtonProps {
+   title: string,
+   icon: string,
+   url: string,
+}
+
+type mySomething = {
+   [key: string]: ButtonProps
+};
+
+interface CustomFooterProps {
+   codePenUrl: string
+}
+
+const CustomFooter = (props: CustomFooterProps) => (
+    <footer style={{ padding: 24 }}>
+       <a href={props.codePenUrl} target="_blank" rel="noopener noreferrer">CodePen</a>
+    </footer>
+);
 
 class Code extends Component {
 
    // This is for calculating Easter up to the year 2099...
-   getEaster(nCurrentYear) {
+   getEaster(nCurrentYear: number): object {
       let easterMonth = 0;
       let easterDay = 0;
       const base = 255 - (11 * (nCurrentYear % 19));
@@ -99,7 +118,7 @@ class Code extends Component {
       return {month: easterMonth, day: easterDay};
    }
 
-   handleClick = (url) => {
+   handleClick = (url: string): void => {
       window.open(url);
    };
 
@@ -115,12 +134,11 @@ class Code extends Component {
          );
       });
 */
-      const buttons = {
-         'github-cricket': {'title': 'Cricket', icon: 'fa fa-bullseye', url: 'https://github.com/hackalot805/cricketkeeper'},
-         'github-bbtuner': {'title': 'BB-Tuner', icon: 'fab fa-itunes-note', url: 'https://github.com/hackalot805/bbtuner'},
-         'github-bbtone': {'title': 'BB-Tone', icon: 'fa fa-volume-up', url: 'https://github.com/hackalot805/bbtone'},
-         'github-bbbeat': {'title': 'BB-Beat', icon: 'fa fa-headphones', url: 'https://github.com/hackalot805/bbbeat'},
-         //'github-progile': {'title': 'GitHub Profile', icon: 'fab fa-github', url: 'https://github.com/hackalot805'}
+      const buttons: mySomething = {
+         'github-cricket': {title: 'Cricket', icon: 'fa fa-bullseye', url: 'https://github.com/hackalot805/cricketkeeper'},
+         'github-bbtuner': {title: 'BB-Tuner', icon: 'fab fa-itunes-note', url: 'https://github.com/hackalot805/bbtuner'},
+         'github-bbtone': {title: 'BB-Tone', icon: 'fa fa-volume-up', url: 'https://github.com/hackalot805/bbtone'},
+         'github-bbbeat': {title: 'BB-Beat', icon: 'fa fa-headphones', url: 'https://github.com/hackalot805/bbbeat'},
       };
 
       const buttonItems =
@@ -139,12 +157,6 @@ class Code extends Component {
           </ListItem>
          );
       });
-
-      const CustomFooter = (props) => (
-       <footer style={{ padding: 24 }}>
-          <a href={props.codePenUrl} target="_blank" rel="noopener noreferrer">CodePen</a>
-       </footer>
-      );
 
       return (
        <div className='code-page'>
