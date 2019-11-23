@@ -136,7 +136,7 @@ class App extends Component<AppProps, AppState> {
                      <div className="container-fluid">
                         <div className="row">
                            <div className="col-sm-12">
-                              <p className="text-center text-muted gutter-5 remove-bottom">
+                              <p className="text-center gutter-5 remove-bottom">
                                  <Button flat variant="primary" onClick={handleShow}>
                                     Acknowledgments
                                  </Button>
