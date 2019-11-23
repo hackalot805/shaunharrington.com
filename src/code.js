@@ -75,7 +75,7 @@ class Code extends Component {
       );
 
       return (
-       <div className='code-panel'>
+       <div className='code-page'>
           <div className="container-fluid">
              <div className="row">
                 <div className='col-sm-10 offset-sm-1'>

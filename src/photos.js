@@ -10,7 +10,6 @@ import sb2_photo from './assets/sb2.jpg';
 import sb3_photo from './assets/sb3.jpg';
 import sb4_photo from './assets/sb4.jpg';
 import buddy_photo from './assets/buddy.jpg';
-import './about.css';
 import { Carousel } from 'react-bootstrap';
 import './photos.css';
 
