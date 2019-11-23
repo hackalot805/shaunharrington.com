@@ -38,6 +38,7 @@ class App extends Component {
    };
 
    setPage = (key, page) => {
+      window.scrollTo(0,0);
       this.navItems = this.navItems.map((item) => {
          if (item.divider) {
             return item;
