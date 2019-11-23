@@ -151,7 +151,7 @@ class App extends Component<AppProps, AppState> {
                   <Modal.Body>
                      <ul>
                         <li><small>Bootstrapped using <a target="_blank" rel="noopener noreferrer" href="https://github.com/facebookincubator/create-react-app">'Create React App'</a></small></li>
-                        <li><small>Text displayed using the <a target="_blank" rel="noopener noreferrer" href="https://www.recursive.design/">'Recursive Sans && Mono'</a> typeface</small></li>
+                        <li><small>Text displayed using the <a target="_blank" rel="noopener noreferrer" href="https://www.recursive.design/">'Recursive Sans &amp; Mono'</a> typeface</small></li>
                         <li><small>Material design provided by the <a target="_blank" rel="noopener noreferrer" href="https://react-md.mlaursen.com/">'react-md'</a> package</small></li>
                      </ul>
                   </Modal.Body>
