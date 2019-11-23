@@ -31,6 +31,29 @@ const NameH2 = styled.h2`
    font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
 `;
 
+const MainArea = styled.div`
+   background: #edede6;
+   padding: 0 40px;
+   border: solid 1px #e0e0e0;
+   border-top: none;
+   text-align: left;
+`;
+
+const HeadShot = styled.div`
+   width: 12.5%;
+   float: left;
+   margin-right: 20px;
+   margin-left: 16px;
+`;
+
+const HeadShotImg = styled.img`
+   width: 100%;
+   max-width: 100px;
+   height: auto;
+   -webkit-border-radius: 50px;
+   border-radius: 50px;
+`;
+
 class Resume extends Component {
    onClick = (url: string) => {
       window.open(url);
@@ -45,9 +68,9 @@ class Resume extends Component {
              <div className="row">
                 <div className="col-sm-12 col-md-offset-0">
                    <MainDetails className="quickFade delayOne">
-                      <div id="headshot">
-                         <img src={headshot} alt="Shaun Harrington" />
-                      </div>
+                      <HeadShot>
+                         <HeadShotImg src={headshot} alt="Shaun Harrington" />
+                      </HeadShot>
 
                       <div id="name">
                          <NameH1 className="quickFade delayTwo">Shaun Harrington</NameH1>
@@ -74,7 +97,7 @@ class Resume extends Component {
              </div>
              <div className="row">
                 <div className="col-sm-12 col-md-offset-0">
-                   <div id="mainArea" className="quickFade delayFive">
+                   <MainArea id="mainArea" className="quickFade delayFive">
                       <section>
                          <article>
                             <div className="sectionTitle">
@@ -213,7 +236,7 @@ class Resume extends Component {
                       <section>
                          <p className="text-center">References and reviews are available upon request. Thank you for your consideration</p>
                       </section>
-                   </div>
+                   </MainArea>
                 </div>
              </div>
           </div>
