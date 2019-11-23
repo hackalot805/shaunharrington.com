@@ -8,7 +8,7 @@ import './about.css';
 class About extends Component {
    render() {
       return (
-       <div>
+       <div className="about-wrapper">
           <div className="container-fluid text-left">
              <div className="row">
                 <div className='col-sm-10 offset-sm-1'>
@@ -40,9 +40,9 @@ class About extends Component {
                       <p>
                          I occasionally have some extra cycles.  Feel free to <a href="mailto:me@shaunharrington.com" title='Contact me'>reach out</a> if you need help with a software project, or just want to say 'Hi'.
                       </p>
-                      <div className="panel panel-primary dogs-panel">
-                         <div className="panel-heading">What am I passionate about?</div>
-                         <div className="panel-body">
+                      <div className="dogs-panel card">
+                         <div className="card-header primary">What am I passionate about?</div>
+                         <div className="card-body">
                             <p>
                                My <a href="http://www.groverbeads.com" target='_blank' rel="noopener noreferrer">wife</a> and I are crazy for dogs.
                                All sizes and all breeds... we just love them all!

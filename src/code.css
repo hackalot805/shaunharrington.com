@@ -79,5 +79,5 @@ div.md-panel-column.md-text {
 .list-item-content:focus {
   outline: none; }
 
-.card {
+.code-panel .card {
   margin-top: 20px; }
