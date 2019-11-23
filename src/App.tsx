@@ -67,7 +67,6 @@ class App extends Component<AppProps, AppState> {
          };
       });
 
-      console.log(InboxListItems[0]);
       this.state = {
          visible: false,
          key: InboxListItems[0].key,
