@@ -7,8 +7,23 @@ import styled from 'styled-components';
 
 import './resume.css';
 
-const MdButtonText = styled(Button) `
-   min-width: inherit;
+const MdButtonText = styled(Button)`
+   &.md-btn--text {
+      min-width: 20px;
+      width: 45px;
+      font-size: 20px;
+      height: 45px;
+
+      @media all and (max-width: 815px) {
+         font-size: 30px;
+         width: 45px;
+      }
+      
+      @media all and (max-width: 626px) {
+         font-size: 30px;
+         width: 45px;
+      }
+   }
 `;
 
 const MainDetails = styled.div`
@@ -23,12 +38,19 @@ const NameH1 = styled.h1`
    font-weight: 700;
    font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
    margin-bottom: -6px;
+
+   @media all and (min-width: 992px) and (max-width: 1110px) {
+      font-size: 2.0em;
+   }
 `;
 
 const NameH2 = styled.h2`
    font-size: 2em;
    margin-left: 2px;
    font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
+   @media all and (min-width: 992px) and (max-width: 1110px) {
+      font-size: 1.8em;
+   }
 `;
 
 const MainArea = styled.div`
@@ -44,6 +66,10 @@ const HeadShot = styled.div`
    float: left;
    margin-right: 20px;
    margin-left: 16px;
+
+   @media all and (max-width: 815px) {
+      display: none;
+   }
 `;
 
 const HeadShotImg = styled.img`
@@ -52,6 +78,38 @@ const HeadShotImg = styled.img`
    height: auto;
    -webkit-border-radius: 50px;
    border-radius: 50px;
+`;
+
+const Name = styled.div`
+   float: left;
+
+   @media all and (max-width: 726px) {
+      float: none;
+      width: 100%;
+      text-align: center;
+   }
+`;
+
+const ContactDetails = styled.div`
+   float: right;
+   padding-right: 20px;
+   
+   @media all and (max-width: 726px) {
+      float: none;
+      width: 100%;
+      text-align: center;
+   }
+`;
+
+const ContactDetailsUL = styled.ul`
+   list-style-type: none;
+   font-size: 0.9em;
+   margin-top: 2px;
+`;
+
+const ContactDetailsLI = styled.li`
+   margin-bottom: 3px;
+   color: #444;
 `;
 
 class Resume extends Component {
@@ -71,26 +129,24 @@ class Resume extends Component {
                       <HeadShot>
                          <HeadShotImg src={headshot} alt="Shaun Harrington" />
                       </HeadShot>
-
-                      <div id="name">
+                      <Name>
                          <NameH1 className="quickFade delayTwo">Shaun Harrington</NameH1>
                          <NameH2 className="quickFade delayThree">Software Developer</NameH2>
-                      </div>
-
-                      <div id="contactDetails" className="quickFade delayFour">
-                         <ul>
-                            <li>e: <a href="mailto:me@shaunharrington.com" target="_blank" rel="noopener noreferrer">me@shaunharrington.com</a></li>
-                            <li>w: <a href="http://www.shaunharrington.com/">www.shaunharrington.com</a></li>
-                            <li>m: (805) 441-7875</li>
-                            <li>
+                      </Name>
+                      <ContactDetails id="contactDetails" className="quickFade delayFour">
+                         <ContactDetailsUL>
+                            <ContactDetailsLI>e: <a href="mailto:me@shaunharrington.com" target="_blank" rel="noopener noreferrer">me@shaunharrington.com</a></ContactDetailsLI>
+                            <ContactDetailsLI>w: <a href="http://www.shaunharrington.com/">www.shaunharrington.com</a></ContactDetailsLI>
+                            <ContactDetailsLI>m: (805) 441-7875</ContactDetailsLI>
+                            <ContactDetailsLI>
                                <MdButtonText flat primary onClick={this.onClick.bind(this, './ShaunHarringtonResume.pdf')} title="PDF Resume"><i className="fas fa-file-pdf"></i></MdButtonText>
                                <MdButtonText flat primary onClick={this.onClick.bind(this, './shaunharrington.vcf')} title="VCard"><i className="fas fa-address-card"></i></MdButtonText>
                                <MdButtonText flat primary onClick={this.onClick.bind(this, 'https://www.linkedin.com/in/shaunharrington')} title="LinkedIn"><i className="fab fa-linkedin"></i></MdButtonText>
                                <MdButtonText flat primary onClick={this.onClick.bind(this, 'https://github.com/hackalot805')} title="GitHub"><i className="fab fa-github"></i></MdButtonText>
                                <MdButtonText flat primary onClick={this.onClick.bind(this, 'https://shaunharrington.slack.com')} title="Slack"><i className="fab fa-slack-hash"></i></MdButtonText>
-                            </li>
-                         </ul>
-                      </div>
+                            </ContactDetailsLI>
+                         </ContactDetailsUL>
+                      </ContactDetails>
                       <div className="clear"></div>
                    </MainDetails>
                 </div>
