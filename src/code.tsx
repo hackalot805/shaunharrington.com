@@ -72,7 +72,7 @@ const ListItemImage = styled.div`
 `;
 
 const Card = styled.div`
-   margin-top: 50px;
+   margin-top: ${props => props.theme.panelGap};
 `;
 
 interface ButtonProps {
