@@ -2,17 +2,19 @@ import "core-js/stable";
 import "regenerator-runtime/runtime";
 import React, { Component } from 'react';
 import headshot from './assets/headshot.jpg';
-import './resume.css';
 import { Button } from 'react-md';
+import styled from 'styled-components';
+
+import './resume.css';
 
 class Resume extends Component {
-   onClick = (url) => {
+   onClick = (url: string) => {
       window.open(url);
    };
 
    render() {
       const year = new Date().getFullYear();
-      const workYears = parseInt(year, 10) - 1989;
+      const workYears = year - 1989;
       return (
        <div>
           <div className="container-fluid" id="page_main">
