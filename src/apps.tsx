@@ -17,12 +17,15 @@ const BtnRow = styled.div`
    margin-bottom: 18px;
 `;
 
-const DartsPanel = styled.div`
+const Panel = styled.div`
+   margin-top: ${props => props.theme.panelGap};
+`;
+
+const DartsPanel = styled(Panel)`
    background-image: url("/images/darts-bg.svg");
    background-repeat: no-repeat;
    background-position: center;
    background-size: 100% auto;
-   margin-top: 50px;
 `;
 
 class Apps extends Component {
@@ -32,7 +35,7 @@ class Apps extends Component {
           <div className="container-fluid">
              <div className="row">
                 <div className='col-sm-10 offset-sm-1'>
-                   <div id='tuner-panel' className="card dogs-panel">
+                   <Panel id='tuner-panel' className="card">
                       <div className="card-header primary text-left"><span><i id='icon-audio' className="fab fa-itunes-note" /></span> Audio Tools</div>
                       <div className="card-body">
                          <p className="small">
@@ -102,7 +105,7 @@ class Apps extends Component {
                             </div>
                          </div>
                       </div>
-                   </div>
+                   </Panel>
                 </div>
              </div>
           </div>

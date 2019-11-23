@@ -163,7 +163,7 @@ class Code extends Component {
           <div className="container-fluid">
              <div className="row">
                 <div className='col-sm-10 offset-sm-1'>
-                   <Card className="card dogs-panel">
+                   <Card className="card">
                       <div className="card-header primary text-left"><span><i id='icon1' className="fa fa-code" /></span> Code</div>
                       <div className="card-body">
                          <p>

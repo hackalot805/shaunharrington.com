@@ -14,7 +14,16 @@ const LogoPanel = styled.div`
 `;
 
 const DogsPanel = styled.div`
-   margin-top: 40px;
+   margin-top: ${props => props.theme.panelGap};
+`;
+
+const SpinningIcon = styled.i`
+   animation: App-logo-spin infinite 20s linear;
+   height: 60px;
+   margin-top: 3px;
+   font-size: 3.5em;
+   margin-right: 50px;
+   color: ${props => props.theme.spinningIconColor};
 `;
 
 class About extends Component {
@@ -47,7 +56,18 @@ class About extends Component {
                          You can learn more about these very cool technologies by clicking on any of the spinning logos below.
                       </p>
                       <p className="text-center logos">
-                         <a href='https://aws.amazon.com' title='Amazon Web Services' target='_blank' rel="noopener noreferrer"><i className="App-logo fab fa-aws"></i></a><a href='https://nodejs.org' title='NodeJS' target='_blank' rel="noopener noreferrer"><i className="App-logo fab fa-node-js"></i></a><a href='https://reactjs.org' title='ReactJS' target='_blank' rel="noopener noreferrer"><i className="App-logo fab fa-react"></i></a><a href='https://angular.io' title='Angular' target='_blank' rel="noopener noreferrer"><i className="App-logo fab fa-angular"></i></a>
+                         <a href='https://aws.amazon.com' title='Amazon Web Services' target='_blank' rel="noopener noreferrer">
+                            <SpinningIcon className="App-logo fab fa-aws"></SpinningIcon>
+                         </a>
+                         <a href='https://nodejs.org' title='NodeJS' target='_blank' rel="noopener noreferrer">
+                            <SpinningIcon className="App-logo fab fa-node-js"></SpinningIcon>
+                         </a>
+                         <a href='https://reactjs.org' title='ReactJS' target='_blank' rel="noopener noreferrer">
+                            <SpinningIcon className="App-logo fab fa-react"></SpinningIcon>
+                         </a>
+                         <a href='https://angular.io' title='Angular' target='_blank' rel="noopener noreferrer">
+                            <SpinningIcon className="App-logo fab fa-angular"></SpinningIcon>
+                         </a>
                       </p>
                       <p>
                          I occasionally have some extra cycles.  Feel free to <a href="mailto:me@shaunharrington.com" title='Contact me'>reach out</a> if you need help with a software project, or just want to say 'Hi'.
