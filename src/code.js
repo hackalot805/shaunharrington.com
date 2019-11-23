@@ -2,7 +2,79 @@ import "core-js/stable";
 import "regenerator-runtime/runtime";
 import React, { Component } from 'react';
 import { ExpansionList, ExpansionPanel } from 'react-md';
-import './code.css';
+import styled from 'styled-components';
+
+const DashboardSection = styled.section`
+   background: inherit;
+   padding: 0 10px 17px;
+   margin-bottom: 20px;
+   border: none;
+`;
+
+const ListContainer = styled.div`
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+`;
+
+const ListItem = styled.div`
+   flex-grow: 0;
+   width: 120px;
+   padding: 5px 5px;
+   cursor: pointer;
+   border-radius: 5px;
+   color: #0d3349;
+`;
+
+const ListItemButton = styled.button`
+   min-height: 100px;
+   margin-top: 10px;
+   margin-right: 5px;
+   background-color: #f2f2f2;
+   padding: 0;
+   box-shadow: 2px 2px 3px gray;
+   min-width: 100px;
+   border-radius: 5px;
+   overflow: hidden;
+   text-align: center;
+
+   :focus {
+      outline: none !important;
+   }
+   
+   :hover .list-item-image {
+      transform: scale(0.9);
+   }
+
+   :focus .list-item-image {
+      transform: scale(0.9);
+   }
+   
+`;
+
+const ListItemTitle = styled.div`
+   overflow: hidden;
+   height: 35px;
+   background-color: transparent;
+   vertical-align: middle;
+`;
+
+const ListItemImage = styled.div`
+   -webkit-transition: all .15s ease-in-out;
+   transition: all .15s ease-in-out;
+   transform: scale(.8);
+   width: 100%;
+   max-width: 110px;
+   max-height: 55px;
+   /* text-shadow: 1px 1px 1px @shadow; */
+   font-size: 2.7em;
+   color: black;
+`;
+
+const Card = styled.div`
+   margin-top: 50px;
+`;
+
 
 class Code extends Component {
 
@@ -55,16 +127,16 @@ class Code extends Component {
       Object.keys(buttons).map((key) => {
          const button = buttons[key];
          return (
-          <div key={button.title} className='list-item'>
-             <button className='btn btn-default btn-large list-item-content' onClick={() => this.handleClick(button.url)}>
-                <div className='list-item-title' title={button.title}>
+          <ListItem key={button.title}>
+             <ListItemButton className='btn btn-default btn-large list-item-button' onClick={() => this.handleClick(button.url)}>
+                <ListItemTitle title={button.title}>
                    {button.title}
-                </div>
-                <div className="list-item-image">
+                </ListItemTitle>
+                <ListItemImage className='list-item-image'>
                    <i className={button.icon} />
-                </div>
-             </button>
-          </div>
+                </ListItemImage>
+             </ListItemButton>
+          </ListItem>
          );
       });
 
@@ -79,24 +151,24 @@ class Code extends Component {
           <div className="container-fluid">
              <div className="row">
                 <div className='col-sm-10 offset-sm-1'>
-                   <div className="card dogs-panel">
+                   <Card className="card dogs-panel">
                       <div className="card-header primary text-left"><span><i id='icon1' className="fa fa-code" /></span> Code</div>
                       <div className="card-body">
                          <p>
                             Most of the interesting code that I have produced is proprietary, and I can't share it. This is what's left...
                          </p>
-                         <section className='dashboard-section'>
-                            <div className="list-container">
+                         <DashboardSection>
+                            <ListContainer>
                                {buttonItems}
-                            </div>
+                            </ListContainer>
                             <p className="text-center text-muted small">
                                (<em>Click on a button to visit the GitHub repository.</em>)
                             </p>
-                         </section>
+                         </DashboardSection>
                       </div>
-                   </div>
+                   </Card>
 
-                   <div className="card">
+                   <Card className="card">
                       <div className="card-header primary text-left"><span><i id='icon1' className="fa fa-cut" /></span> Snippets</div>
                       <div className="card-body">
                          <ExpansionList className='md-cell md-cell--12'>
@@ -144,9 +216,9 @@ getEaster(currentYear) {
                             </ExpansionPanel>
                          </ExpansionList>
                       </div>
-                   </div>
+                   </Card>
 
-                   <div className="card">
+                   <Card className="card">
                       <div className="card-header primary text-left"><span><i id='icon2' className="fa fa-newspaper" /></span> Articles</div>
                       <div className="card-body">
                          <ExpansionList className='md-cell md-cell--12'>
@@ -168,7 +240,7 @@ getEaster(currentYear) {
                             </ExpansionPanel>
                          </ExpansionList>
                       </div>
-                   </div>
+                   </Card>
 
                 </div>
              </div>
