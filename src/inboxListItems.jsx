@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default [
+const InboxListItems = [
    {
       key: 'about',
       primaryText: 'About',
@@ -27,9 +27,6 @@ export default [
       primaryText: 'Photos',
       leftIcon: <i className="fa fa-image"></i>,
    },
-/*   {
-      key: 'playground',
-      primaryText: 'Playground',
-      leftIcon: <i className="fa fa-image"></i>,
-   }*/
 ];
+
+export default InboxListItems;
