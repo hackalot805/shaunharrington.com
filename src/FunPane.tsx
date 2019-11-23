@@ -2,7 +2,12 @@ import "core-js/stable";
 import "regenerator-runtime/runtime";
 import React, { Component } from 'react';
 
-class FunPane extends Component {
+interface FunPaneProps {
+   extra: string,
+   size: number
+}
+
+class FunPane extends Component<FunPaneProps> {
    render() {
       let { extra } = this.props;
 
