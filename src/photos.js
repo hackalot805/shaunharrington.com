@@ -11,7 +11,21 @@ import sb3_photo from './assets/sb3.jpg';
 import sb4_photo from './assets/sb4.jpg';
 import buddy_photo from './assets/buddy.jpg';
 import { Carousel } from 'react-bootstrap';
+import styled from 'styled-components';
+
 import './photos.css';
+
+const CarouselItemImg = styled.img`
+   width: 100%;
+`;
+
+const CarouselItemP = styled.p`
+   color: white;
+`;
+
+const CarouselItemH3 = styled.p`
+   color: white;
+`;
 
 /*
                       <div className="container-fluid">
@@ -34,66 +48,66 @@ class Photos extends Component {
                 <div className='col-sm-12 photos-wrapper'>
                    <Carousel>
                       <Carousel.Item>
-                         <img alt="900x500" src={sc_photo} />
+                         <CarouselItemImg alt="900x500" src={sc_photo} />
                          <Carousel.Caption>
-                            <h3>SOULCRUSHER</h3>
-                            <p>My daily ride for about a decade.</p>
+                            <CarouselItemH3>SOULCRUSHER</CarouselItemH3>
+                            <CarouselItemP>My daily ride for about a decade.</CarouselItemP>
                          </Carousel.Caption>
                       </Carousel.Item>
                       <Carousel.Item>
-                         <img alt="900x500" src={sc2_photo} />
+                         <CarouselItemImg alt="900x500" src={sc2_photo} />
                          <Carousel.Caption>
-                            <h3>SOULCRUSHER</h3>
-                            <p>With the original tank and frontend.</p>
+                            <CarouselItemH3>SOULCRUSHER</CarouselItemH3>
+                            <CarouselItemP>With the original tank and frontend.</CarouselItemP>
                          </Carousel.Caption>
                       </Carousel.Item>
                       <Carousel.Item>
-                         <img alt="900x500" src={sc3_photo} />
+                         <CarouselItemImg alt="900x500" src={sc3_photo} />
                          <Carousel.Caption>
-                            <h3>SOULCRUSHER</h3>
-                            <p>Sturgis style freedom.</p>
+                            <CarouselItemH3>SOULCRUSHER</CarouselItemH3>
+                            <CarouselItemP>Sturgis style freedom.</CarouselItemP>
                          </Carousel.Caption>
                       </Carousel.Item>
                       <Carousel.Item>
-                         <img alt="900x500" src={sc4_photo} />
+                         <CarouselItemImg alt="900x500" src={sc4_photo} />
                          <Carousel.Caption>
-                            <h3>SOULCRUSHER</h3>
-                            <p>Arizona bar hopping.</p>
+                            <CarouselItemH3>SOULCRUSHER</CarouselItemH3>
+                            <CarouselItemP>Arizona bar hopping.</CarouselItemP>
                          </Carousel.Caption>
                       </Carousel.Item>
                       <Carousel.Item>
-                         <img  alt="900x500" src={sb_photo} />
+                         <CarouselItemImg  alt="900x500" src={sb_photo} />
                          <Carousel.Caption>
-                            <h3>SUPERBEAST</h3>
-                            <p>Bit of a shop project.</p>
+                            <CarouselItemH3>SUPERBEAST</CarouselItemH3>
+                            <CarouselItemP>Bit of a shop project.</CarouselItemP>
                          </Carousel.Caption>
                       </Carousel.Item>
                       <Carousel.Item>
-                         <img alt="900x500" src={sb2_photo} />
+                         <CarouselItemImg alt="900x500" src={sb2_photo} />
                          <Carousel.Caption>
-                            <h3>SUPERBEAST</h3>
-                            <p>Sick body work with molded taillights, and even a retracting license plate.</p>
+                            <CarouselItemH3>SUPERBEAST</CarouselItemH3>
+                            <CarouselItemP>Sick body work with molded taillights, and even a retracting license plate.</CarouselItemP>
                          </Carousel.Caption>
                       </Carousel.Item>
                       <Carousel.Item>
-                         <img alt="900x500" src={sb3_photo} />
+                         <CarouselItemImg alt="900x500" src={sb3_photo} />
                          <Carousel.Caption>
-                            <h3>SUPERBEAST</h3>
-                            <p>Why do people keep looking at me?</p>
+                            <CarouselItemH3>SUPERBEAST</CarouselItemH3>
+                            <CarouselItemP>Why do people keep looking at me?</CarouselItemP>
                          </Carousel.Caption>
                       </Carousel.Item>
                       <Carousel.Item>
-                         <img alt="900x500" src={sb4_photo} />
+                         <CarouselItemImg alt="900x500" src={sb4_photo} />
                          <Carousel.Caption>
-                            <h3>SUPERBEAST</h3>
-                            <p>I'm a tractor.</p>
+                            <CarouselItemH3>SUPERBEAST</CarouselItemH3>
+                            <CarouselItemP>I'm a tractor.</CarouselItemP>
                          </Carousel.Caption>
                       </Carousel.Item>
                       <Carousel.Item>
-                         <img alt="900x500" src={buddy_photo} />
+                         <CarouselItemImg alt="900x500" src={buddy_photo} />
                          <Carousel.Caption>
-                            <h3>BUDDY</h3>
-                            <p>My dog is a nut case!</p>
+                            <CarouselItemH3>BUDDY</CarouselItemH3>
+                            <CarouselItemP>My dog is a nut case!</CarouselItemP>
                          </Carousel.Caption>
                       </Carousel.Item>
                    </Carousel>
