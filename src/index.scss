@@ -1,7 +1,5 @@
 @import 'globals';
 
-$enable-gradients: true;
-
 @font-face {
   font-family: 'Recursive';
   src: local('Recursive'), url(./fonts/recursive-MONO_CASL_wght_slnt_ital--2019_11_05-00_13.ttf) format('truetype');
@@ -12,13 +10,6 @@ $md-primary-color: $md-light-green-500;
 $md-secondary-color: $md-lime-a-400;
 
 @include react-md-everything;
-
-body {
-   margin: 0;
-   padding: 0;
-   font-family: 'Recursive', sans-serif;
-   font-variation-settings: "MONO" .1, "CASL" .2;
-}
 
 h1,
 h2,
@@ -81,7 +72,10 @@ html, body {
 }
 
 body {
-   padding-top: 15px;
+   margin: 0;
+   font-family: 'Recursive', sans-serif;
+   padding: 15px 0 0;
+   font-variation-settings: "MONO" .1, "CASL" .2;
 }
 
 h1 {
