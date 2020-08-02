@@ -46,7 +46,7 @@ class Apps extends Component {
                             <div className="row">
                                <div className='col-sm-12 text-left md-grid'>
                                   <Card className="quickFade delayOne md-cell md-cell--4 md-cell--10-tablet">
-                                     <ProductCardTitle title="BB-Tuner" subtitle="A instrument tuner" />
+                                     <ProductCardTitle title="BB-Tuner" subtitle="Instrument tuner" />
                                      <CardText className='text-center'>
                                         <div className="container-fluid">
                                            <div className="row">
@@ -63,7 +63,7 @@ class Apps extends Component {
                                      </CardText>
                                   </Card>
                                   <Card className="quickFade delayTwo md-cell md-cell--4 md-cell--10-tablet">
-                                     <ProductCardTitle title="BB-Tone" subtitle="A simple tone generator" />
+                                     <ProductCardTitle title="BB-Tone" subtitle="Tone generator" />
                                      <CardText className='text-center'>
                                         <div className="container-fluid">
                                            <div className="row">
@@ -80,7 +80,7 @@ class Apps extends Component {
                                      </CardText>
                                   </Card>
                                   <Card className="quickFade delayThree md-cell md-cell--4 md-cell--10-tablet">
-                                     <ProductCardTitle title="BB-Beat" subtitle="A simple beat generator" />
+                                     <ProductCardTitle title="BB-Beat" subtitle="Beat generator" />
                                      <CardText className='text-center'>
                                         <div className="container-fluid">
                                            <div className="row">

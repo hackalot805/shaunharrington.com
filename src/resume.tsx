@@ -180,7 +180,7 @@ class Resume extends Component {
                                   I'm a quick learner with a 'pit-bull' like attitude towards task and milestones.
                                </p>
                                <p>
-                                  My professional experiences include significant exposure to: Linux, Apache, NGINX, MySQL, SDB, RDS, Node.js, Jade, Angular2, Mongo, PHP, JAVASCRIPT, JAVA, SPRING, AWT, SWT, SWING, C++, C, RTL, WIN32, STL, ATL, MFC, COM, DCOM, Visual Basic, X86, HTML, XMHTL, HTML5, CSS, XML, JSON, AJAX, jQuery, jQuery UI, jpGraph, D3, Zapatec, Bootstrap, Boilerplate, WordPress, ZenCart, eCommerce, Drupal, Symfony, Zend, Authorize.net API, Google Fusion, Google Map API, Yahoo Weather API, Intelij, PHPStorm, Visual Developer Studio, MSDN, Eclipse, Mercurial, SVN, PVCS, CVS, Bounds Checker, Bugzilla, RedShift, Amazon Web Services and many more.
+                                  My professional experiences include significant exposure to: Linux, Apache, NGINX, MySQL, SDB, RDS, NodeJS, Jade, React, Vue, Angular2, Mongo, PHP, JAVASCRIPT, JAVA, SPRING, AWT, SWT, SWING, C++, C, RTL, WIN32, STL, ATL, MFC, COM, DCOM, Visual Basic, X86, HTML, XMHTL, HTML5, CSS, XML, JSON, AJAX, jQuery, jQuery UI, jpGraph, D3, Zapatec, Bootstrap, Boilerplate, WordPress, ZenCart, eCommerce, Drupal, Symfony, Zend, Authorize.net API, Google Fusion, Google Map API, Yahoo Weather API, Intelij, PHPStorm, Visual Developer Studio, MSDN, Eclipse, Mercurial, SVN, PVCS, CVS, Bounds Checker, Bugzilla, RedShift, Amazon Web Services and many more.
                                </p>
                             </div>
                          </article>

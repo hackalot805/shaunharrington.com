@@ -147,7 +147,7 @@ class App extends Component<AppProps, AppState> {
                      <div className="container-fluid">
                         <div className="row">
                            <div className="col-sm-12">
-                              <p className="text-center gutter-5 remove-bottom">
+                              <p className="text-center gutter-5 acknowledgments-bottom">
                                  <Button flat variant="primary" onClick={handleShow}>
                                     Acknowledgments
                                  </Button>
@@ -167,7 +167,7 @@ class App extends Component<AppProps, AppState> {
                   <Modal.Body>
                      <ul>
                         <li><small>Bootstrapped using <a target="_blank" rel="noopener noreferrer" href="https://github.com/facebookincubator/create-react-app">'Create React App'</a></small></li>
-                        <li><small>Text displayed using the <a target="_blank" rel="noopener noreferrer" href="https://www.recursive.design/">'Recursive Sans &amp; Mono'</a> typeface</small></li>
+                        <li><small>Text displayed using <a target="_blank" rel="noopener noreferrer" href="https://rsms.me/inter/">'Inter'</a> and <a target="_blank" rel="noopener noreferrer" href="https://www.recursive.design/">'Recursive</a> typefaces</small></li>
                         <li><small>Material design provided by the <a target="_blank" rel="noopener noreferrer" href="https://react-md.mlaursen.com/">'react-md'</a> package</small></li>
                      </ul>
                   </Modal.Body>
