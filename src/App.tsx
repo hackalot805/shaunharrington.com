@@ -35,6 +35,16 @@ const Copyright = styled.p`
    font-size: .8em;
 `;
 
+const BLMBanner = styled.p`
+   font-size: .8em;
+   background: black;
+   color: white;
+   padding: 20px 0;
+   text-align: center;
+   font-size: 20pt;
+   margin: 20px;
+`;
+
 const Footer = styled.footer`
    margin-top: 5px;
    color: silver;
@@ -130,13 +140,14 @@ class App extends Component<AppProps, AppState> {
       return (
          <ThemeProvider theme={theme}>
             <NavigationDrawer drawerTitle={<p>Shaun Harrington <AppLogo src={harringtonLogo} alt='harrington-logo' /></p>} toolbarTitle={<div></div>} navItems={this.navItems}>
+               <BLMBanner>Black Lives Matter. <a href={'https://support.eji.org/give/153413/#!/donation/checkout'} target={'_blank'}>Support the Equal Justice Initiative.</a></BLMBanner>
                <AppLeft>
                   {content}
                   <Footer className="page-content">
                      <div className="container-fluid">
                         <div className="row">
                            <div className="col-sm-12">
-                              <p className="text-center gutter-5 remove-bottom">
+                              <p className="text-center gutter-5 acknowledgments-bottom">
                                  <Button flat variant="primary" onClick={handleShow}>
                                     Acknowledgments
                                  </Button>
@@ -156,7 +167,7 @@ class App extends Component<AppProps, AppState> {
                   <Modal.Body>
                      <ul>
                         <li><small>Bootstrapped using <a target="_blank" rel="noopener noreferrer" href="https://github.com/facebookincubator/create-react-app">'Create React App'</a></small></li>
-                        <li><small>Text displayed using the <a target="_blank" rel="noopener noreferrer" href="https://www.recursive.design/">'Recursive Sans &amp; Mono'</a> typeface</small></li>
+                        <li><small>Text displayed using <a target="_blank" rel="noopener noreferrer" href="https://rsms.me/inter/">'Inter'</a> and <a target="_blank" rel="noopener noreferrer" href="https://www.recursive.design/">'Recursive</a> typefaces</small></li>
                         <li><small>Material design provided by the <a target="_blank" rel="noopener noreferrer" href="https://react-md.mlaursen.com/">'react-md'</a> package</small></li>
                      </ul>
                   </Modal.Body>

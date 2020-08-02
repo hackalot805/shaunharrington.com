@@ -22,7 +22,7 @@ button,
 input,
 textarea,
 html {
-   font-family: "Recursive", "Roboto", sans-serif;
+   font-family: $default-font-family;
 }
 
 .md-background--primary {
@@ -36,6 +36,14 @@ html {
    width: 20px;
 }
 
+.acknowledgments-bottom .md-btn--text {
+   padding: 4px 16px;
+}
+
+.md-card-title h2 {
+   color: #8e8e8e;
+}
+
 header.md-background--primary {
    background-image: url("/images/eyes.jpg");
    background-repeat: no-repeat;
@@ -43,12 +51,12 @@ header.md-background--primary {
    background-position: center center;
 }
 
-.card-header {
-   font-variation-settings: "MONO" .3, "CASL" .1, "wght" 500;
-}
-
 .card-header.primary {
-   background: #9befd9;
+   background: #e3fdf6;
+   text-transform: uppercase;
+   color: #b9b9b9;
+   font-weight: 800;
+   font-family: "Recursive", arial, sans-serif;
 }
 
 @keyframes App-logo-spin {
@@ -66,16 +74,15 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 html, body {
    background: white;
-   font-family: 'Recursive', 'Lato', helvetica, arial, sans-serif;
+   font-family: $default-font-family;
    font-size: 16px;
    color: #222;
 }
 
 body {
    margin: 0;
-   font-family: 'Recursive', sans-serif;
+   font-family: $default-font-family;
    padding: 15px 0 0;
-   font-variation-settings: "MONO" .1, "CASL" .2;
 }
 
 h1 {
@@ -92,7 +99,7 @@ h1 {
 }
 
 p {
-   font-size: 1em;
+   font-size: 1.1em;
    line-height: 1.4em;
    margin-bottom: 20px;
    color: #444;

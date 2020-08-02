@@ -183,6 +183,9 @@ class Code extends Component {
                    <Card className="card">
                       <div className="card-header primary text-left"><span><i id='icon1' className="fa fa-cut" /></span> Snippets</div>
                       <div className="card-body">
+                         <p>
+                            I thought it would be fun to share an occasional snippet, but I guess not based on the lack of content here.  I need to try harder. :-)
+                         </p>
                          <ExpansionList className='md-cell md-cell--12'>
                             <ExpansionPanel label="'getEaster()' JavaScript Function" footer={<CustomFooter codePenUrl='//codepen.io/hackalot805/pen/XZwXeN' />}>
                                <p>Based on my understanding of how to compute Easter.  I wrote this for a calendar generating program that I developed many years ago.</p>
@@ -233,6 +236,9 @@ getEaster(currentYear) {
                    <Card className="card">
                       <div className="card-header primary text-left"><span><i id='icon2' className="fa fa-newspaper" /></span> Articles</div>
                       <div className="card-body">
+                         <p>
+                            I haven't written many articles lately.  These are really old.
+                         </p>
                          <ExpansionList className='md-cell md-cell--12'>
                             <ExpansionPanel label="CodeProject" footer={null}>
                                <p>
