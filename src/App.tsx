@@ -140,7 +140,7 @@ class App extends Component<AppProps, AppState> {
       return (
          <ThemeProvider theme={theme}>
             <NavigationDrawer drawerTitle={<p>Shaun Harrington <AppLogo src={harringtonLogo} alt='harrington-logo' /></p>} toolbarTitle={<div></div>} navItems={this.navItems}>
-               <BLMBanner>Black Lives Matter. <a href={'https://support.eji.org/give/153413/#!/donation/checkout'} target={'_blank'}>Support the Equal Justice Initiative.</a></BLMBanner>
+               <BLMBanner>Black Lives Matter. <a href={'https://support.eji.org/give/153413/#!/donation/checkout'} target={'_blank'} rel="noopener noreferrer">Support the Equal Justice Initiative.</a></BLMBanner>
                <AppLeft>
                   {content}
                   <Footer className="page-content">
