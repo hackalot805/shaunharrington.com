@@ -6,7 +6,7 @@
   font-weight: 300 900;
 }
 
-$md-primary-color: $md-light-green-500;
+$md-primary-color: #3DA89F;
 $md-secondary-color: $md-lime-a-400;
 
 @include react-md-everything;
@@ -30,6 +30,7 @@ html {
 }
 .md-text--theme-primary {
    color: $md-primary-color;
+   font-weight: bold;
 }
 
 .md-tile-addon--icon {
@@ -52,11 +53,13 @@ header.md-background--primary {
 }
 
 .card-header.primary {
-   background: #e3fdf6;
+   background: #73C9B6;
    text-transform: uppercase;
-   color: #b9b9b9;
+   color: rgba(0, 0, 0, 0.60);
    font-weight: 800;
    font-family: "Recursive", arial, sans-serif;
+   border: solid .1em white;
+   border-bottom-style: inset;
 }
 
 @keyframes App-logo-spin {
