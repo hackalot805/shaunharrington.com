@@ -162,25 +162,27 @@ class Resume extends Component {
 
                             <div className="sectionContent">
                                <p>
-                                  I have a strong skill set for, and extensive experience with web application design, architecture and implementation on a LAMP stack.
-                                  I also have extensive experience with desktop application design, architecture and implementation on Windows platforms.
-                                  More recently, I have gained some expereince with MEAN stack web application development.
-                                  I'm very comfortable programming with PHP, JAVASCRIPT, TYPESCRIPT, ANGLUAR, JAVA, C++ and C.
-                                  I have spent a lot of time creating user interfaces, designing database schemas,
-                                  writing and optimizing queries for MySQL,
-                                  authoring desktop web sites using XHTML and responsive web sites using HTML5,
-                                  building web services and RESTful APIs,
-                                  contributing to engine logic and implementing enhancements within.
-                                  I have also spent a lot of time working in a dev-ops capacity writing and maintaining Amazon Web Services (AWS) instance spin-up scripts (bash and bat) and system update scripts (bash).
-                               </p>
-                               <p>
-                                  I have {workYears} years of professional programming experience.  My extensive user interface design experience gives me a keen eye for usability and best practices.
-                                  Years of working on both large and small product development teams has helped me to develop strong communication, presentation and documentation skills.
+                                  I have over {workYears} years of professional application software programming experience.
+                                  I deeply enjoy challenges and learning new programming skills.
+                                  I'm a quick learner and known for my pit-bull like attitude towards tasks and milestones.
+                                  I'm a strong addition to design teams and bring a keen eye for usability and best practices to the table.
+                                  I'm good at estimating work load and completion dates. I never turn my nose up at grunt work.
+                                  I am honest, hard working and have strong communication, presentation, and documentation skills.
+                                  I work very well with quality assurance, technical support, and localization teams.
                                   I'm a fan of Agile development methodologies and continuous development cycles.
-                                  I'm a quick learner with a 'pit-bull' like attitude towards task and milestones.
+                                  I'm a team player that can get the job done.
+                                  I know what it means, and what it takes to turn a technology into a world class software product.
                                </p>
                                <p>
-                                  My professional experiences include significant exposure to: Linux, Apache, NGINX, MySQL, SDB, RDS, NodeJS, Jade, React, Vue, Angular2, Mongo, PHP, JAVASCRIPT, JAVA, SPRING, AWT, SWT, SWING, C++, C, RTL, WIN32, STL, ATL, MFC, COM, DCOM, Visual Basic, X86, HTML, XMHTL, HTML5, CSS, XML, JSON, AJAX, jQuery, jQuery UI, jpGraph, D3, Zapatec, Bootstrap, Boilerplate, WordPress, ZenCart, eCommerce, Drupal, Symfony, Zend, Authorize.net API, Google Fusion, Google Map API, Yahoo Weather API, Intelij, PHPStorm, Visual Developer Studio, MSDN, Eclipse, Mercurial, SVN, PVCS, CVS, Bounds Checker, Bugzilla, RedShift, Amazon Web Services and many more.
+                                  The bulk of my early efforts are in producing OEM software products for global retail markets on Windows platforms.
+                                  Relevant tools included X86 Assembly, C, C++, JAVA, RTL, WIN32, STL, ATL, MFC, COM, DCOM, SPRING, AWT, SWT and SWING, Zortech, Borland, Microsoft Visual Developer Studio (MSDN), Bounds Checker, CVS and PVCS.
+                                  More recently, I've been working as a full stack engineer focused on producing web applications on both LAMP and MEAN stacks.
+                                  My efforts include using Ubuntu (light config, Ruby and Shell scripts), Apache (light config), NGINX (light config), MySQL (5.1-8.0), MongoDB (light), AWS (EC2, S3, LightSail, SDB, RDS, Route53), PHP (4.x-8.1, WordPress, ZenCart, eCommerce, Zapatec, Drupal, Symfony, Zend), Javascript (Native, Typescript, React, Angular (light), Node.js, Vue.js (light), jQuery, jQueryUI, MooTools, jpGraph, D3, Bootstrap, Jade), HTML/XHTML/HTML5, CSS, LESS, Authorize.net API, Google Fusion API, Google Map API, Yahoo Weather API, IntelliJ (my fav), PHPStorm, GitHub (git), Mercurial, BugZilla, RedShift, Sentry, Solar Winds and more.
+                               </p>
+                               <p>
+                                  While I primarily lean towards UI and UX efforts with an eye for responsive design, I also have a strong skill set for, and extensive experience with web application design, architecture and implementation.
+                                  This includes authoring of PHP and JavaScript class libraries, RESTful APIs and web services, along with fairly complicated MySQL queries, designing database schemas and contributing to backend/engine logic.
+                                  I've also spent a fair amount of time doing dev-ops tasks like producing server templates, Bash and Ruby scripts, launching/swapping instances and installing services.
                                </p>
                             </div>
                          </article>
@@ -196,14 +198,18 @@ class Resume extends Component {
                                <h3>Dozuki, San Luis Obispo, CA <a target="_blank" rel="noopener noreferrer" href='http://www.dozuki.com/' title="Visit web site"><i className="fas fa-link"></i></a></h3>
                                <p className="subDetails">November 2017 - Present</p>
                                <p>
-                                  I'm currently working as a software developer at Dozuki.
-                                  Dozuki is spin off from iFixit that builds on the iFixit core codebase to offer an training guide platform to fortune 500 companies.
+                                  I'm currently working as a full stack software engineer at Dozuki.
+                                  Dozuki is spin off from iFixit that builds on the iFixit core codebase to offer a training guide platform to Fortune 500 companies.
                                </p>
                                <p>
-                                  My specific efforts are primarily focused on UI/UIX enhancements, API endpoint development and 3rd party application integration.
-                                  I'm currently working on a Zapier CLI Application that provides triggers and actions associated with our platform's API;
-                                  Enhancements to the /comments API endpoint;
-                                  Integration of React based data tables and other components within the data capture reporting UI.
+                                  My efforts include 3rd party application and service integrations, UI/UIX enhancements
+                                  language/translation system enhancements, major feature implementations,
+                                  API endpoint development and bug squashing.
+                                  During my time at Dozuki I've had significant exposure to PHP, MySQL, JavaScript, TypeScript, React, AWS and Sentry to name a few.
+                                  I'm particularly proud of a Grafana integration designed to provide in-app dashboards.
+                                  The implementation consists of a free standing Grafana server in AWS that employs a NodeJS based auth-proxy services to validate access.
+                                  I've also enjoyed working on language/translation system enhancements,
+                                  major feature implementations, API endpoint development and of course, UI/UIX enhancements.
                                </p>
                             </article>
 
