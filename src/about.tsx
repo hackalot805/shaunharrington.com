@@ -51,7 +51,7 @@ class About extends Component {
                          </div>
                       </LogoPanel>
                       <p>
-                         While I spend most of my time writing classes and functions using PHP and JavaScript,
+                         While I spend most of my time writing classes and functions using PHP and various flavors of JavaScript,
                          I really dig working with Amazon Web Services, NodeJS, ReactJS and Angular.
                          You can learn more about these very cool technologies by clicking on any of the spinning logos below.
                       </p>
