@@ -231,7 +231,7 @@ class Resume extends Component {
                                   Authoring of DR system spin up, service installation and product update bash scripts.
                                   Dev-op responsibilities that include Amazon Web Services (AWS) EC2 instance, volume and snapshot management along with heavy use of Route53, SES, RDS, SDB and S3.
                                   Closely working with QA to ensure quality, and customer service departments to prioritize feature roll outs and bug fixes.
-                                  I've had the opportunity to mentor a couple of jr. engineers recently, which is exciting for me.
+                                  I've had the opportunity to mentor a couple of jr. engineers recently, which was a lot of fun.
                                </p>
                             </article>
 
