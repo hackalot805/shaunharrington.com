@@ -208,17 +208,15 @@ class Resume extends Component {
                                   During my time at Dozuki I've had significant exposure to PHP, MySQL, JavaScript, TypeScript, React, AWS and Sentry to name a few.
                                   I'm particularly proud of a Grafana integration designed to provide in-app dashboards.
                                   The implementation consists of a free standing Grafana server in AWS that employs a NodeJS based auth-proxy services to validate access.
-                                  I've also enjoyed working on language/translation system enhancements,
-                                  major feature implementations, API endpoint development and of course, UI/UIX enhancements.
                                </p>
                             </article>
 
                             <article>
-                               <h2>Senior Software Developer</h2>
+                               <h2>Principal Software Developer</h2>
                                <h3>SMS Masterminds, San Luis Obispo, CA <a target="_blank" rel="noopener noreferrer" href='http://www.smsmasterminds.com/' title="Visit web site"><i className="fa fa-link"></i></a></h3>
                                <p className="subDetails">November 2013 - April 2017</p>
                                <p>
-                                  I worked as the lead software developer for the 'Engage' product at SMS Masterminds.
+                                  I worked as the principal software developer for the 'Engage' product at SMS Masterminds.
                                   'Engage' is a branding enabled boilerplate web site platform coupled with an SMS sending and receiving platform that enables clients to send and receive text messages to groups of mobile subscribers collected by web, mobile and loyalty kiosk (in store tablet) methods.
                                   Over the course of my efforts the product has grown from 5 licensees to over 200 licensees, and from 1 million mobile subscribers to over 7 million mobile subscribers.
                                </p>
