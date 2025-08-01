@@ -2,15 +2,11 @@ const fs = require('fs');
 const JSONData = fs.readFileSync('../../diff.json').toString();
 const currentTranslations = JSON.parse(fs.readFileSync('./current_translations.json').toString());
 
-console.log(JSONData);
-
 const patternJS = /_js\([^)]*\)/g;
 const patternP = /___p\([^)]*\)/g;
 
-const matchJS = patternJS.exec(JSONData);
-const matchP = patternP.exec(JSONData);
-
-console.log("matchJS TRACE", matchJS);
+const matchJS = patternJS.match(JSONData);
+const matchP = patternP.match(JSONData);
 
 let newStrings = [];
 matchJS?.forEach((match) => {
@@ -24,6 +20,5 @@ matchP?.forEach((match) => {
   }
 });
 
-console.log(newStrings);
 const output = newStrings.join(',');
 console.log(output);
