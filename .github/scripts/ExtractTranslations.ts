@@ -3,7 +3,7 @@ const JSONData = process.env.JSON_DIFF;
 console.log(JSONData);
 // const currentTranslations = process.env.CURRENT_TRANSLATIONS
 
-const currentTranslations = fs.readFileSync('./current_translations.json');
+const currentTranslations = fs.readFileSync('./current_translations.json').toString();
 console.log(currentTranslations);
 
 const patternJS = /_js\([^)]*\)/;
