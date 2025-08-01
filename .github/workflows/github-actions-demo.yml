@@ -46,7 +46,8 @@ jobs:
         env:
           DIFF: ${{ steps.git-diff-action.outputs.json-diff }}
         run: |
-          echo "Files: ${{ fromJson(env.DIFF) }}"
+          echo $DIFF
+#          echo "Files: ${{ fromJson(env.DIFF) }}"          
 #          for file in ${CHANGED_FILES}; do
 #            echo "$file was changed"
 #          done           
