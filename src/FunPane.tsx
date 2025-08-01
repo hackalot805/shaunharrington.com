@@ -17,6 +17,7 @@ class FunPane extends Component<FunPaneProps> {
 
       let junk = _js('junk edited');
       let junk = __p(1, '%1 day ago', '%1 days ago', `1`);
+      const testing = true ? _js("true junk") : _js("false junk");
       let junk = _js('junk new');
       let junk = _js('Guide');
       let cssClass = `fun-pane ${extra}`;
