@@ -28,6 +28,7 @@ jobs:
           files: |
             src/**
             package.json
+            README.md
       - name: Run tests if source files changed
         if: steps.changed-files.outputs.src_changed == 'true'
         run: |
