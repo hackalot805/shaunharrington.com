@@ -29,7 +29,7 @@ matchP?.forEach((match) => {
 
   // TODO: Extract the 2nd and 3rd params from the ___p text
   //       For each extracted
-  //          Wrap in _js(...)
+  //          Wrap in _js
   //          const matchJS = JSONData.match(patternJS);
 });
 
