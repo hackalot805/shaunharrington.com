@@ -9,13 +9,13 @@ const matchJS = JSONData.match(patternJS);
 const matchP = JSONData.match(patternP);
 
 let newStrings = [];
-matchJS?.forEach((match) => {
+matchJS?.forEach((match: string) => {
   const token = match.substring(5, match.length - 2);
   if (!(token in currentTranslations.translations) && !newStrings.includes(match)) {
     newStrings.push(match);
   }
 });
-matchP?.forEach((match) => {
+matchP?.forEach((match: string) => {
   const token = match.substring(6, match.length - 2);
   if (!(token in currentTranslations.translations) && !newStrings.includes(match)) {
     newStrings.push(match);
