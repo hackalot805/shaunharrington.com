@@ -56,7 +56,7 @@ jobs:
         env:
           JSON_DIFF: ${{ steps.git-diff-action.outputs.json-diff }}
         run: node ExtractTranslations.ts
-        working-directory: ../scripts
+        working-directory: ./.github/scripts
           
 # Feed file to a script (JS, that we checked in) to prosess the diff.
           
