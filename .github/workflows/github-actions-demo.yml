@@ -24,10 +24,11 @@ jobs:
         run: |
            curl -X POST -H "Content-Type: application/json" -d '{"locale": "fr"}' --cookie-jar ./cookies https://sm.dozuki.com/api/2.0/translations/settings
            currentTranslations=$(curl -b ./cookies https://sm.dozuki.com/api/2.0/translations)
+           echo "${currentTranslations}"
            export CURRENT_TRANSLATIONS=$currentTranslations
       - name: Parse Changes Via Script
         env:
           JSON_DIFF: ${{ steps.git-diff-action.outputs.json-diff }}
-          CURRENT_TRANSLATIONS: ${{ steps.fetch-translations.outputs.currentTranslations }}
+          CURRENT_TRANSLATIONS: ${{ steps.fetch-translations.outputs.CURRENT_TRANSLATIONS }}
         run: node ExtractTranslations.ts
         working-directory: ./.github/scripts
