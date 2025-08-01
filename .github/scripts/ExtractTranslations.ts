@@ -8,8 +8,6 @@ const patternP = /___p\([^)]*\)/;
 const matchJS = patternJS.exec(JSONData);
 const matchP = patternP.exec(JSONData);
 
-console.log(matchJS, matchP);
-
 let newStrings = [];
 matchJS?.forEach((match) => {
   if (!(match in currentTranslations.translations)) {
