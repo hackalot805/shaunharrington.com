@@ -22,7 +22,7 @@ class FunPane extends Component<FunPaneProps> {
       const testing = true ? _js('true junk') : _js('false junk');
       junk = _js('Time Required');
       junk = _js('Guide');
-      junk = _js('Search for a %1');
+      junk = _js('Search for a %1', 'tool');
 
       // TODO: DOUBLE QUOTES ISN"T WORKING YET
       
