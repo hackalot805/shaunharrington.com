@@ -22,7 +22,7 @@ jobs:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - uses: actions/checkout@v4
       - name: Get Changed Files
-        uses: tj-actions/changed-files@v44
+        uses: tj-actions/changed-files
         with:
           # Optional: specify files/directories to include/exclude
           files: |
