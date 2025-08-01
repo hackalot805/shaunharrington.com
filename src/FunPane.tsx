@@ -25,7 +25,6 @@ class FunPane extends Component<FunPaneProps> {
       junk = _js('Search for a %1');
 
       // TODO: DOUBLE QUOTES ISN"T WORKING YET
-      // junk = _js("junk new");
       
       // TODO: __p ISN"T WORKING YET
       // junk = __p(1, '%1 day ago', '%1 days ago', `1`);
