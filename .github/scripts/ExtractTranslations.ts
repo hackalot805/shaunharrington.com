@@ -34,4 +34,4 @@ matchP?.forEach((match) => {
 });
 
 const output = newStrings.join('\\n');
-console.log(output);
+// console.log(output);
