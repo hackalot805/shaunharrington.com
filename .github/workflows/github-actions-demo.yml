@@ -29,6 +29,5 @@ jobs:
       - name: Parse Changes Via Script
         env:
           JSON_DIFF: ${{ steps.git-diff-action.outputs.json-diff }}
-          CURRENT_TRANSLATIONS: ${{ steps.fetch-translations.outputs.CURRENT_TRANSLATIONS }}
         run: node ExtractTranslations.ts
         working-directory: ./.github/scripts
