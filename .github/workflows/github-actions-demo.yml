@@ -31,9 +31,16 @@ jobs:
             src/**
             package.json
             README.md
-      - run: echo "Data ${{ steps.changed-files }}"
       - name: Run tests if source files changed
         if: steps.changed-files.outputs.src_changed == 'true'
         run: |
           echo "Running tests because source files changed."
           # Your test command here
+
+      - name: List all changed files
+        env:
+          ALL_CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
+        run: |
+          for file in ${ALL_CHANGED_FILES}; do
+            echo "$file was changed"
+          done
