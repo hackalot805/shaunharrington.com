@@ -20,6 +20,7 @@ class FunPane extends Component<FunPaneProps> {
       const testing = true ? _js('true junk') : _js('false junk');
       let junk = _js('junk new');
       let junk = _js('junk new');
+      const testing = true ? _js('true junk') : _js('false junk');
       let junk = _js('Guide');
       let cssClass = `fun-pane ${extra}`;
 
