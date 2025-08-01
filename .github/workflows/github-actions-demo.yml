@@ -48,8 +48,9 @@ jobs:
         run: |
           echo "${JSON_DIFF}"
           echo "Files: ${{ fromJson(env.JSON_DIFF).files }}"
-          for path in ${{ fromJson(env.JSON_DIFF).files }}; do
-            echo "$path was changed"
+          for files in ${{ fromJson(env.JSON_DIFF).files }}; do
+            echo "$files.path was changed"
+            echo "${{ fromJson(files).path }} was changed"
           done
 # for each 'files'
 #   for each 'chunks'
