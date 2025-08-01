@@ -1,6 +1,8 @@
 const fs = require('fs');
-const JSONData = process.env.JSON_DIFF;
+const JSONData = fs.readFileSync('../../diff.json');
 const currentTranslations = JSON.parse(fs.readFileSync('./current_translations.json').toString());
+
+console.log(JSONData);
 
 const patternJS = /_js\([^)]*\)/g;
 const patternP = /___p\([^)]*\)/g;
