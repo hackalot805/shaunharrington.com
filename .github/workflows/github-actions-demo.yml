@@ -44,9 +44,9 @@ jobs:
 
       - name: Parse Changes
         env:
-          DIFF: ${{ steps.git-diff-action.outputs.json-diff-path }}
+          DIFF: ${{ steps.git-diff-action.outputs.json-diff }}
         run: |
-          echo "Files: ${{ fromJson(DIFF).files }}"
+          echo "Files: ${{ fromJson(env.DIFF).files }}"
 #          for file in ${CHANGED_FILES}; do
 #            echo "$file was changed"
 #          done           
