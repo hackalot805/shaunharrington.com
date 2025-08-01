@@ -22,5 +22,5 @@ matchP?.forEach((match) => {
   }
 });
 
-const output = newStrings.join('\n');
+const output = newStrings.join('\\n');
 console.log(output);
