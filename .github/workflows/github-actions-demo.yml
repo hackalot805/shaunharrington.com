@@ -17,7 +17,7 @@ jobs:
         with:
           json_diff_file_output: diff.json
           raw_diff_file_output: diff.txt
-          file_output_only: "true"
+          file_output_only: "false"
       # Print the diff in JSON format
       - name: print json diff
         env:
