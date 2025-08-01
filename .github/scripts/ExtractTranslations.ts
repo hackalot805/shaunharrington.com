@@ -11,13 +11,13 @@ const matchP = JSONData.match(patternP);
 let newStrings = [];
 matchJS?.forEach((match) => {
   const token = match.substring(5, match.length - 2);
-  if (!(token in currentTranslations.translations)) {
+  if (!(token in currentTranslations.translations) && !newstrings.find(match)) {
     newStrings.push(match);
   }
 });
 matchP?.forEach((match) => {
   const token = match.substring(6, match.length - 2);
-  if (!(token in currentTranslations.translations)) {
+  if (!(token in currentTranslations.translations) && !newstrings.find(match)) {
     newStrings.push(match);
   }
 });
