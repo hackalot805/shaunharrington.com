@@ -10,7 +10,7 @@ const patternP = /___p\([^)]*\)/g;
 const matchJS = patternJS.exec(JSONData);
 const matchP = patternP.exec(JSONData);
 
-console.log(matchJS);
+console.log("matchJS TRACE", matchJS);
 
 let newStrings = [];
 matchJS?.forEach((match) => {
