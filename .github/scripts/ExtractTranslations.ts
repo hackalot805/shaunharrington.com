@@ -6,6 +6,7 @@ let newStrings = [];
 // Process _js instances
 const patternJS = /_js\([^)]*\)/g;
 const matchJS = JSONData.match(patternJS);
+console.log(matchJS);
 matchJS?.forEach((match) => {
   console.log(match);
   // TODO: match.length - 2 is wrong, we might be passing params
