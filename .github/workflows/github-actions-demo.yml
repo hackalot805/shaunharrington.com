@@ -51,6 +51,15 @@ jobs:
           for file in ${{ fromJson(env.JSON_DIFF).files }}; do
             echo "$file['path'] was changed"
           done
+
+      - name: Parse Changes Via Script
+        env:
+          JSON_DIFF: ${{ steps.git-diff-action.outputs.json-diff }}
+        run: node ExtractTranslations.ts
+        working-directory: ../scripts
+          
+# Feed file to a script (JS, that we checked in) to prosess the diff.
+          
 # for each 'files'
 #   for each 'chunks'
 #      for each 'changes'
