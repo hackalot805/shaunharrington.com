@@ -10,12 +10,14 @@ const matchP = JSONData.match(patternP);
 
 let newStrings = [];
 matchJS?.forEach((match) => {
-  if (!(match in currentTranslations.translations)) {
+  const token = match.substring(5, match.length - 2);
+  if (!(token in currentTranslations.translations)) {
     newStrings.push(match);
   }
 });
 matchP?.forEach((match) => {
-  if (!(match in currentTranslations.translations)) {
+  const token = match.substring(6, match.length - 2);
+  if (!(token in currentTranslations.translations)) {
     newStrings.push(match);
   }
 });
