@@ -1,6 +1,8 @@
 const fs = require('fs');
 const JSONData = process.env.JSON_DIFF;
 console.log(JSONData);
+const currentTranslations = process.env.CURRENT_TRANSLATIONS
+console.log(currentTranslations);
 
 const patternJS = /_js\([^)]*\)/;
 const patternP = /___p\([^)]*\)/;
