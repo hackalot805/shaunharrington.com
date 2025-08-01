@@ -6,13 +6,12 @@ permissions:
   pull-requests: write
 jobs:
   changed_files:
-    runs-on: ubuntu-latest  # windows-latest || macos-latest
+    runs-on: ubuntu-latest
     name: Test changed-files
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # OR "2" -> To retrieve the preceding commit.
-      # Check the PR diff using the current branch and the base branch of the PR
+          fetch-depth: 0
       - uses: GrantBirki/git-diff-action@v2.8.1
         id: git-diff-action
         with:
