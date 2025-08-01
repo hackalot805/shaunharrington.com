@@ -48,7 +48,6 @@ jobs:
         run: |
           echo "${JSON_DIFF}"
           echo "Files: ${{ fromJson(env.JSON_DIFF).files }}"
-          # echo "Files: ${{ fromJson(env.DIFF) }}"          
           for path in ${{ fromJson(env.JSON_DIFF).files }}; do
             echo "$path was changed"
           done
