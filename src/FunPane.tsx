@@ -7,11 +7,15 @@ interface FunPaneProps {
    size: number
 }
 
+const _js = (value: string): string {
+   return value;
+}
 // Random Comment #6
 class FunPane extends Component<FunPaneProps> {
    render() {
       let { extra } = this.props;
 
+      let junk = _js('junk');
       let cssClass = `fun-pane ${extra}`;
 
       const divStyle = {
