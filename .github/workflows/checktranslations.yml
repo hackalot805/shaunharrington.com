@@ -27,8 +27,6 @@ jobs:
            echo "$currentTranslations" >> ./.github/scripts/current_translations.json
       - name: Parse Changes Via Script
         id: parse-changes
-        env:
-          JSON_DIFF: ${{ steps.git-diff-action.outputs.json-diff }}
         run: |
           newStrings=$(node ExtractTranslations.ts)
           echo $newStrings;
