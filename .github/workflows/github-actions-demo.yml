@@ -41,3 +41,17 @@ jobs:
           for file in ${ALL_CHANGED_FILES}; do
             echo "$file was changed"
           done      
+
+      - name: Parse Changes
+        env:
+          CHANGED_FILES: ${{ steps.git-diff-action.outputs.json-diff-path.files }}
+        run: |
+          for file in ${CHANGED_FILES}; do
+            echo "$file was changed"
+          done           
+# for each 'files'
+#   for each 'chunks'
+#      for each 'changes'
+#        if (type==='AddedLine')
+#          accumulate _js and ___p strings
+#            - Later we will compare the against known translations 
