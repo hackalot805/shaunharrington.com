@@ -15,7 +15,7 @@ class FunPane extends Component<FunPaneProps> {
    render() {
       let { extra } = this.props;
 
-      let junk = _js('junk');
+      let junk = _js('junk edited');
       let cssClass = `fun-pane ${extra}`;
 
       const divStyle = {
