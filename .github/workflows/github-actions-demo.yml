@@ -1,4 +1,4 @@
-name: GitHub Actions Demo
+name: Check For New Translations
 run-name: ${{ github.actor }} is checking for new translations! 🚀
 on: pull_request
 permissions:
