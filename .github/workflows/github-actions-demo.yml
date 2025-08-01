@@ -18,8 +18,16 @@ jobs:
           json_diff_file_output: diff.json
           raw_diff_file_output: diff.txt
           file_output_only: "false"
+      - name: Fetch Current Localized Text
+        id: fetch-translations
+        shell: bash
+        run: |
+           curl -X POST -H "Content-Type: application/json" -d '{"locale": "fr"}' --cookie-jar ./cookies https://sm.dozuki.com/api/2.0/translations/settings
+           currentTranslations=$(curl -b ./cookies https://sm.dozuki.com/api/2.0/translations)
+           export CURRENT_TRANSLATIONS=$currentTranslations
       - name: Parse Changes Via Script
         env:
           JSON_DIFF: ${{ steps.git-diff-action.outputs.json-diff }}
+          CURRENT_TRANSLATIONS: ${{ steps.fetch-translations.CURRENT_TRANSLATIONS }}
         run: node ExtractTranslations.ts
         working-directory: ./.github/scripts
