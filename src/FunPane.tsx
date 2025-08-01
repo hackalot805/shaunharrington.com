@@ -22,11 +22,15 @@ class FunPane extends Component<FunPaneProps> {
       const testing = true ? _js('true junk') : _js('false junk');
       junk = _js('Time Required');
       junk = _js('Guide');
+      junk = _js('Search for a %1');
 
-      // TODO: THIS ISN"T WORKING YET
-      junk = __p(1, '%1 day ago', '%1 days ago', `1`);
-      junk = _js('%1 day ago');
-      junk = _js('%1 days ago');
+      // TODO: DOUBLE QUOTES ISN"T WORKING YET
+      // junk = _js("junk new");
+      
+      // TODO: __p ISN"T WORKING YET
+      // junk = __p(1, '%1 day ago', '%1 days ago', `1`);
+      // junk = _js('%1 day ago');
+      // junk = _js('%1 days ago');
       
       let cssClass = `fun-pane ${extra}`;
       const divStyle = {
