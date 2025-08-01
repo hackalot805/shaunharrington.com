@@ -10,6 +10,8 @@ const patternP = /___p\([^)]*\)/g;
 const matchJS = patternJS.exec(JSONData);
 const matchP = patternP.exec(JSONData);
 
+console.log(matchJS);
+
 let newStrings = [];
 matchJS?.forEach((match) => {
   if (!(match in currentTranslations.translations)) {
