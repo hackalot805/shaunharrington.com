@@ -31,7 +31,7 @@ jobs:
             src/**
             package.json
             README.md
-      - run: echo "Data:${{ steps.changed-files }}"
+      - run: echo "Data ${{ steps.changed-files }}"
       - name: Run tests if source files changed
         if: steps.changed-files.outputs.src_changed == 'true'
         run: |
