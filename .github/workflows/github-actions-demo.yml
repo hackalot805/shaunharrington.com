@@ -50,7 +50,6 @@ jobs:
           echo "Files: ${{ fromJson(env.JSON_DIFF).files }}"
           for files in ${{ fromJson(env.JSON_DIFF).files }}; do
             echo "$files.path was changed"
-            echo "${{ fromJson(files).path }} was changed"
           done
 # for each 'files'
 #   for each 'chunks'
