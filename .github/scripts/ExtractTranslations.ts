@@ -20,5 +20,6 @@ matchP?.forEach((match) => {
   }
 });
 
+console.log(newStrings);
 const output = newStrings.join(',');
 console.log(output);
