@@ -1,4 +1,4 @@
-name: GitHub Actions Demo
+oname: GitHub Actions Demo
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: pull_request
 permissions:
@@ -25,7 +25,7 @@ jobs:
            curl -X POST -H "Content-Type: application/json" -d '{"locale": "fr"}' --cookie-jar ./cookies https://sm.dozuki.com/api/2.0/translations/settings
            currentTranslations=$(curl -b ./cookies https://sm.dozuki.com/api/2.0/translations)
            echo "${currentTranslations}"
-           export CURRENT_TRANSLATIONS=$currentTranslations
+           echo "CURRENT_TRANSLATIONS=$currentTranslations" >> $GITHUB_OUTPUT
       - name: Parse Changes Via Script
         env:
           JSON_DIFF: ${{ steps.git-diff-action.outputs.json-diff }}
