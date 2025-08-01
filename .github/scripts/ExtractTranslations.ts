@@ -6,9 +6,9 @@ let newStrings = [];
 // Process _js instances
 const patternJS = /_js\([^)]*\)/g;
 const matchJS = JSONData.match(patternJS);
-//console.log(matchJS);
+console.log(matchJS);
 matchJS?.forEach((match) => {
-  //console.log(match);
+  console.log(match);
   // TODO: match.length - 2 is wrong, we might be passing params
   //       Find the char after the first param, if ')' we are good to go, if ',' we need to truncate and replace with ')'
   const token = match.substring(5, match.length - 2);
