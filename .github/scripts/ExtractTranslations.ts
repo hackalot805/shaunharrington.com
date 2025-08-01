@@ -11,12 +11,12 @@ const matchP = patternP.exec(JSONData);
 console.log(matchJS, matchP);
 
 let newStrings = [];
-matchJS.foreach((match) => {
+matchJS.forEach((match) => {
   if (!(match in currentTranslations.translations)) {
     newStrings.push(match);
   }
 });
-matchP.foreach((match) => {
+matchP.forEach((match) => {
   if (!(match in currentTranslations.translations)) {
     newStrings.push(match);
   }
