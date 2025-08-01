@@ -24,8 +24,7 @@ jobs:
         run: |
            curl -X POST -H "Content-Type: application/json" -d '{"locale": "fr"}' --cookie-jar ./cookies https://sm.dozuki.com/api/2.0/translations/settings
            currentTranslations=$(curl -b ./cookies https://sm.dozuki.com/api/2.0/translations)
-           echo "${currentTranslations}"
-           echo "CURRENT_TRANSLATIONS=$currentTranslations" >> $GITHUB_OUTPUT
+           echo "$currentTranslations" >> ./.github/scripts/current_translations.json
       - name: Parse Changes Via Script
         env:
           JSON_DIFF: ${{ steps.git-diff-action.outputs.json-diff }}
