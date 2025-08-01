@@ -2,7 +2,7 @@ name: GitHub Actions Demo
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 jobs:
-  Explore-GitHub-Actions:
+  Inspect-Code:
     runs-on: ubuntu-latest
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
@@ -16,3 +16,20 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
+  Inspect-Changes:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      - uses: actions/checkout@v4
+      - name: Get Changed Files
+        uses: tj-actions/changed-files@v44
+        with:
+          # Optional: specify files/directories to include/exclude
+          files: |
+            src/**
+            package.json
+      - name: Run tests if source files changed
+        if: steps.changed-files.outputs.src_changed == 'true'
+        run: |
+          echo "Running tests because source files changed."
+          # Your test command here
