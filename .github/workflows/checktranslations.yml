@@ -24,13 +24,13 @@ jobs:
         run: |
            curl -X POST -H "Content-Type: application/json" -d '{"locale": "fr"}' --cookie-jar ./cookies https://sm.dozuki.com/api/2.0/translations/settings
            currentTranslations=$(curl -b ./cookies https://sm.dozuki.com/api/2.0/translations)
+           echo $currentTranslations
            echo "$currentTranslations" >> ./.github/scripts/current_translations.json
       - name: Parse Changes Via Script
         id: parse-changes
         run: |
           newStrings=$(node ExtractTranslations.ts)
-          echo $newStrings;
-          echo "NEW_STRINGS=$newStrings" >> $GITHUB_OUTPUT;
+          echo "NEW_STRINGS=$newStrings" >> $GITHUB_OUTPUT
         working-directory: ./.github/scripts
       - name: Send localized string change notification
         env:
