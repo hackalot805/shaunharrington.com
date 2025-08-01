@@ -17,16 +17,18 @@ class FunPane extends Component<FunPaneProps> {
 
       let junk = _js('junk edited');
       const testing = true ? _js('true junk') : _js('false junk');
-      let junk = _js('junk new');
-      let junk = _js('junk new');
+      junk = _js('junk new');
+      junk = _js('junk new');
       const testing = true ? _js('true junk') : _js('false junk');
-      let junk = _js('Time Required');
-      let junk = _js('Guide');
-      let cssClass = `fun-pane ${extra}`;
+      junk = _js('Time Required');
+      junk = _js('Guide');
 
       // TODO: THIS ISN"T WORKING YET
-      let junk = __p(1, '%1 day ago', '%1 days ago', `1`);
-
+      junk = __p(1, '%1 day ago', '%1 days ago', `1`);
+      junk = _js('%1 day ago');
+      junk = _js('%1 days ago');
+      
+      let cssClass = `fun-pane ${extra}`;
       const divStyle = {
          width: `80px`,
          height: `80px`,
