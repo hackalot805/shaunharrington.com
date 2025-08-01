@@ -3,6 +3,7 @@ run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: pull_request
 permissions:
   contents: read # this is necessary for the Action to be able to read the contents of the repo
+  pull-requests: write
 jobs:
   changed_files:
     runs-on: ubuntu-latest  # windows-latest || macos-latest
