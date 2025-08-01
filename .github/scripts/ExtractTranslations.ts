@@ -5,8 +5,8 @@ const currentTranslations = JSON.parse(fs.readFileSync('./current_translations.j
 const patternJS = /_js\([^)]*\)/g;
 const patternP = /___p\([^)]*\)/g;
 
-const matchJS = patternJS.match(JSONData);
-const matchP = patternP.match(JSONData);
+const matchJS = JSONData.match(patternJS);
+const matchP = JSONData.match(patternP);
 
 let newStrings = [];
 matchJS?.forEach((match) => {
