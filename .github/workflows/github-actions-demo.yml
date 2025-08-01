@@ -47,7 +47,7 @@ jobs:
           JSON_DIFF: ${{ steps.git-diff-action.outputs.json-diff }}
         run: |
           echo "${JSON_DIFF}"
-          echo "Files: ${{ fromJson(env.MY_JSON_DATA).files }}"
+          echo "Files: ${{ fromJson(env.JSON_DIFF).files }}"
 #          echo "Files: ${{ fromJson(env.DIFF) }}"          
 #          for file in ${CHANGED_FILES}; do
 #            echo "$file was changed"
