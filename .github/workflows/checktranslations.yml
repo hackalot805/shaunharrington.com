@@ -23,7 +23,6 @@ jobs:
         working-directory: ./dev
         run: |
           diffResult=$(node diffContainsTranslations.js)
-          echo "HAS_CHANGES=$diffResult"
       - name: Send Notification
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
