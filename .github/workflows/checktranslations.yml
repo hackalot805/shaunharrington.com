@@ -29,8 +29,8 @@ jobs:
         id: parse-changes
         run: |
           newStrings=$(node ExtractTranslations.ts)
-          echo $newStrings
-          # echo "NEW_STRINGS=$newStrings" >> $GITHUB_OUTPUT
+          # echo $newStrings
+          echo "NEW_STRINGS=$newStrings" >> $GITHUB_OUTPUT
         working-directory: ./.github/scripts
       - name: Send localized string change notification
         env:
