@@ -22,11 +22,3 @@ junk = _js('Search for a %1 and %2', 'tool', 'manual');
 // Found - These should not be included in the comment.
 junk = _js('Time Required');
 junk = _js('Guide');
-
-
-// TODO: DOUBLE QUOTES ISN'T WORKING YET
-
-// TODO: __p ISN"T WORKING YET
-// junk = __p(1, '%1 day ago', '%1 days ago', `1`);
-// junk = _js('%1 day ago');
-// junk = _js('%1 days ago');
