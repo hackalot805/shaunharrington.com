@@ -6,21 +6,12 @@ let newStrings = [];
 // Process _js instances
 const patternJS = /_js\([^)]*\)/g;
 const matchJS = JSONData.match(patternJS);
- console.log(matchJS);
 matchJS?.forEach((match) => {
-   console.log(match);
-
    const delim = match.substring(4, 5);
- // TODO: This is shaky... what if \', is used in the string?
+   // TODO: This is shaky... what if \', is used in the string?
    const endOffset = match.indexOf(`${delim},`, 5);
-  // TODO: match.length - 2 is wrong, we might be passing params
-  //       Find the char after the first param, if ')' we are good to go, if ',' we need to truncate and replace with ')'
-  // string is `_js('Search for a %1', 'tool')`
 
- console.log(`endoffset = ${endOffset}`);
- 
   const token = match.substring(5, endOffset === -1 ? match.length - 2 : endOffset);
- console.log(`TOKEN: ${token} | `);
   if (!(token in currentTranslations.translations) && !newStrings.includes(match)) {
     newStrings.push(match);
   }
