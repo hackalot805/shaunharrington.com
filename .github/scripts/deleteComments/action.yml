@@ -17,6 +17,7 @@ runs:
             issue_number: context.issue.number,
           })
           console.log(pr_comments);
+          echo $pr_comments
           await Promise.all(
             pr_comments.data.filter(
               comment => comment.body?.startsWith("[${{inputs.identifier}}]")
