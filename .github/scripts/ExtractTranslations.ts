@@ -16,6 +16,8 @@ matchJS?.forEach((match) => {
   // TODO: match.length - 2 is wrong, we might be passing params
   //       Find the char after the first param, if ')' we are good to go, if ',' we need to truncate and replace with ')'
   // string is `_js('Search for a %1', 'tool')`
+
+ console.log(`endoffset = ${endOffset}`);
  
   const token = match.substring(5, endOffset ?? -2);
  console.log(`TOKEN: ${token}`);
