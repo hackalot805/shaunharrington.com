@@ -9,13 +9,16 @@ const matchJS = JSONData.match(patternJS);
  console.log(matchJS);
 matchJS?.forEach((match) => {
    console.log(match);
-   
+
+   const delim = match.substring(4, 5);
+ // TODO: This is shaky... what if \', is used in the string?
+   const endOffset = match.indexOf(`${delim},`, 5);
   // TODO: match.length - 2 is wrong, we might be passing params
   //       Find the char after the first param, if ')' we are good to go, if ',' we need to truncate and replace with ')'
   // string is `_js('Search for a %1', 'tool')`
  
-  const token = match.substring(5, match.length - 2);
- console.log(`TOKEN: ${token}`);
+  const token = match.substring(5, endOffset - 5);
+ console.log(`TOKEN: ${token}\\n`);
   if (!(token in currentTranslations.translations) && !newStrings.includes(match)) {
     newStrings.push(match);
   }
