@@ -32,13 +32,13 @@ jobs:
           echo $newStrings
           # echo "NEW_STRINGS=$newStrings" >> $GITHUB_OUTPUT
         working-directory: ./.github/scripts
-#      - name: Send localized string change notification
-#        env:
-#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-#        run: |
-#          curl -X POST \
-#          -H "Authorization: token $GITHUB_TOKEN" \
-#          -H "Accept: application/vnd.github+json" \
-#          -d "{\"body\":\"${{ steps.parse-changes.outputs.NEW_STRINGS }}\"}" \
-#          "https://api.github.com/repos/${{ github.repository }}/issues/${{ github.event.pull_request.number }}/comments"
+      - name: Send localized string change notification
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          curl -X POST \
+          -H "Authorization: token $GITHUB_TOKEN" \
+          -H "Accept: application/vnd.github+json" \
+          -d "{\"body\":\"${{ steps.parse-changes.outputs.NEW_STRINGS }}\"}" \
+          "https://api.github.com/repos/${{ github.repository }}/issues/${{ github.event.pull_request.number }}/comments"
         
