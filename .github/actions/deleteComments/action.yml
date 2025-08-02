@@ -16,7 +16,7 @@ runs:
             repo: context.repo.repo,
             issue_number: context.issue.number,
           })
-          console.log(prComments);
+          console.log(${{inputs.identifier}}, prComments);
           await Promise.all(
             prComments.data.filter(
               comment => comment.body?.startsWith("[${{inputs.identifier}}]")
