@@ -23,9 +23,9 @@ jobs:
         id: parse-changes
         working-directory: ./dev
         run: |
-          diffResult = $(node diffContainsTranslations.js)
+          diffResult=$(node diffContainsTranslations.js)
           echo "diffResult = ${diffResult}"
-          hasChanges = $(node diffContainsTranslations.js) === 'true'
+          hasChanges=diffResult === 'true'
           echo "hasChanges = ${hasChanges}"
           echo "HAS_CHANGES=$hasChanges" >> $GITHUB_OUTPUT
       - name: Send Notification
