@@ -6,7 +6,7 @@ const _js = (value: string): string {
 let junk = _js('junk simple');
 
 // Duplicated
-junk = _js('junk dublicated');
+junk = _js('junk duplicated');
 junk = _js('junk duplicated');
 
 // Two on one line
