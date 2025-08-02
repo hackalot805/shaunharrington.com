@@ -27,7 +27,7 @@ jobs:
       - name: Remove Previous Comments
         uses: ./.github/actions/deleteComments
         with:
-          identifier: 'This PR appears to have new or edited translations strings.'
+          identifier: '### This PR appears to have new or edited translations strings.'
       - name: Send Notification
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
