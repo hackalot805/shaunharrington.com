@@ -1,5 +1,4 @@
 name: Check For New Translations
-
 run-name: ${{ github.actor }} is checking for new translations! 🚀
 on: pull_request
 permissions:
@@ -24,17 +23,6 @@ jobs:
         working-directory: ./dev
         run: |
           diffResult=$(node diffContainsTranslations.js)
-          echo "diff : ${diffResult}"
-          echo "HAS_CHANGES=${$diffResult ? 'true' : 'false'}" >> $GITHUB_OUTPUT
-      - name: Send Notification
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          if [ -z "${{ steps.parse-changes.outputs.HAS_CHANGES }}" ]; then
-            curl -X POST \
-            -H "Authorization: token $GITHUB_TOKEN" \
-            -H "Accept: application/vnd.github+json" \
-            -d "{\"body\":\"PR appears to have new or edited translations strings.\\nMake sure to run the translationStrings.js script and commit output to the monolith\"}" \
-            "https://api.github.com/repos/${{ github.repository }}/issues/${{ github.event.pull_request.number }}/comments"
-          fi
+          echo "HAS_CHANGES=$diffResult" >> $GITHUB_OUTPUT
+
           
