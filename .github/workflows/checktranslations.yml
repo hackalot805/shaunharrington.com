@@ -24,6 +24,10 @@ jobs:
         run: |
           DIFF_RESULT=($(node diffContainsTranslations.js) = 'true')
           echo "HAS_CHANGES=$DIFF_RESULT" >> $GITHUB_OUTPUT
+      - name: Remove Previous Comments
+        uses: ./.github/actions/remove_comments
+        with:
+          identifier: '### This PR appears to have new or edited translations strings'
       - name: Send Notification
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
