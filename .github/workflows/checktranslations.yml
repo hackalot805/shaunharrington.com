@@ -25,9 +25,7 @@ jobs:
         run: |
           diffResult=$(node diffContainsTranslations.js)
           echo "diffResult = ${diffResult}"
-          hasChanges=(diffResult=='true')
-          echo "hasChanges = ${hasChanges}"
-          echo "HAS_CHANGES=$hasChanges" >> $GITHUB_OUTPUT
+          echo "HAS_CHANGES=$diffResult" >> $GITHUB_OUTPUT
       - name: Send Notification
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
