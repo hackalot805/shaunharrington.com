@@ -19,7 +19,7 @@ matchJS?.forEach((match) => {
 
  console.log(`endoffset = ${endOffset}`);
  
-  const token = match.substring(5, endOffset === -1 ? -2 : endOffset);
+  const token = match.substring(5, endOffset === -1 ? match.length - 2 : endOffset);
  console.log(`TOKEN: ${token} | `);
   if (!(token in currentTranslations.translations) && !newStrings.includes(match)) {
     newStrings.push(match);
