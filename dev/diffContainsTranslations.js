@@ -1,5 +1,5 @@
 const fs = require('fs');
-const JSONData = fs.readFileSync('../../diff.json').toString();
+const JSONData = fs.readFileSync('./../.guithub/diff.json').toString();
 
 const patternJS = /_js\([^)]*\)/g;
 const matchJS = JSONData.match(patternJS);
