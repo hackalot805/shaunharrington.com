@@ -28,7 +28,6 @@ jobs:
         uses: ./.github/actions/deleteComments
         with:
           identifier: 'This PR appears to have new or edited translations strings'
-          debug: 'true'
       - name: Send Notification
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
