@@ -18,7 +18,7 @@ runs:
           })
 
           console.log("${{inputs.identifier}}\\n", prComments);
-          console.log(comment.body?.startsWith("[${{inputs.identifier}}]");
+          console.log(comment.body?.startsWith("[${{inputs.identifier}}]"));
           
           await Promise.all(
             prComments.data.filter(
