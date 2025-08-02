@@ -22,7 +22,8 @@ jobs:
         id: parse-changes
         working-directory: ./dev
         run: |
-          diffResult=$(node diffContainsTranslations.js)
+          DIFF_RESULT=$(node diffContainsTranslations.js)
+          echo "HAS_CHANGES=$DIFF_RESULT" >> $GITHUB_OUTPUT
       - name: Send Notification
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
