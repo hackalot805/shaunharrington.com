@@ -28,8 +28,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          echo "${{ steps.parse-changes.outputs.HAS_CHANGES }}"
-          if [ "$steps.parse-changes.outputs.HAS_CHANGES" == 'true' ]; then
+          if [ ${{ steps.parse-changes.outputs.HAS_CHANGES }} == 'true' ]; then
             curl -X POST \
             -H "Authorization: token $GITHUB_TOKEN" \
             -H "Accept: application/vnd.github+json" \
