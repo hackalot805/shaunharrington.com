@@ -18,7 +18,7 @@ runs:
           })
           await Promise.all(
             prComments.data.filter(
-              comment => comment.body?.startsWith("[${{inputs.identifier}}]")
+              comment => comment.body?.startsWith("${{inputs.identifier}}")
             ).map(
               comment => {
                   console.log("DELETING COMMENT", comment);
