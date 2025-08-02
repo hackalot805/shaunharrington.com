@@ -1,0 +1,42 @@
+name: Check For New Translations
+run-name: ${{ github.actor }} is checking for new translations! 🚀
+on: pull_request
+permissions:
+  contents: read # this is necessary for the Action to be able to read the contents of the repo
+  pull-requests: write
+jobs:
+  changed_files:
+    runs-on: ubuntu-latest
+    name: Checking Changed Files...
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: GrantBirki/git-diff-action@v2.8.1
+        id: git-diff-action
+        with:
+          json_diff_file_output: diff.json
+          raw_diff_file_output: diff.txt
+          file_output_only: "true"
+      - name: Parse Changes
+        id: parse-changes
+        working-directory: ./dev
+        run: |
+          DIFF_RESULT=($(node diffContainsTranslations.js) = 'true')
+          echo "HAS_CHANGES=$DIFF_RESULT" >> $GITHUB_OUTPUT
+      - name: Remove Previous Translations Comments
+        uses: ./.github/actions/deleteComments
+        with:
+          identifier: '### ❗This PR appears to have new or edited translation strings.'
+      - name: Post New Translations Comment If Needed
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if [ ${{ steps.parse-changes.outputs.HAS_CHANGES }} == 'true' ]; then
+            curl -X POST \
+            -H "Authorization: token $GITHUB_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            -d "{\"body\":\"## ❗This PR appears to have new or edited translation strings.\\nIf this is true, make sure to run the \`./dev/translationStrings.js\` script and commit the output to the monolith in \`web-app-strings/web-app-strings.js\`\"}" \
+            "https://api.github.com/repos/${{ github.repository }}/issues/${{ github.event.pull_request.number }}/comments"
+          fi
+          
