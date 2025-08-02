@@ -17,8 +17,8 @@ matchJS?.forEach((match) => {
   //       Find the char after the first param, if ')' we are good to go, if ',' we need to truncate and replace with ')'
   // string is `_js('Search for a %1', 'tool')`
  
-  const token = match.substring(5, endOffset - 5);
- console.log(`TOKEN: ${token}\\n`);
+  const token = match.substring(5, endOffset);
+ console.log(`TOKEN: ${token}`);
   if (!(token in currentTranslations.translations) && !newStrings.includes(match)) {
     newStrings.push(match);
   }
