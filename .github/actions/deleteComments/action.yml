@@ -23,10 +23,11 @@ runs:
               comment => {
                   console.log("DELETING COMMENT", comment);
                   return github.rest.issues.deleteComment({
-                  owner: context.repo.owner,
-                  repo: context.repo.repo,
-                  issue_number: context.issue.number,
-                  comment_id: comment.id,
-              })
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    issue_number: context.issue.number,
+                    comment_id: comment.id,
+                })
+              }
             )
           )
