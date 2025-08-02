@@ -21,7 +21,7 @@ jobs:
           file_output_only: "true"
       - name: Parse Changes
         id: parse-changes
-        working-directory: ./../../dev
+        working-directory: ./dev
         run: |
           hasChanges = $(node diffContainsTranslations.js) === 'true';
           echo "HAS_CHANGES=$hasChanges" >> $GITHUB_OUTPUT
