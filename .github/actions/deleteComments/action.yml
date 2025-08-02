@@ -16,17 +16,12 @@ runs:
             repo: context.repo.repo,
             issue_number: context.issue.number,
           })
-
-          # console.log("${{inputs.identifier}}\\n", prComments);
-          # console.log(prComments[0].body?.startsWith("[${{inputs.identifier}}]"));
-          
           await Promise.all(
             prComments.data.filter(
               comment => comment.body?.startsWith("[${{inputs.identifier}}]")
             ).map(
               comment => {
                   console.log("DELETING COMMENT", comment);
-                  
                   return github.rest.issues.deleteComment({
                   owner: context.repo.owner,
                   repo: context.repo.repo,
